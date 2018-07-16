@@ -1,6 +1,6 @@
 {
   "name": "quantumpack",
-  "version": "0.0.24",
+  "version": "0.0.25",
   "description": "Extensible, opinionated webpack configuration",
   "engines": {
     "node": ">= 8.0.0",
