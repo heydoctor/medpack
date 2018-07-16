@@ -220,6 +220,7 @@ module.exports = ({ mode, paths, env, sourceMaps }) => {
             },
             // Catch-all
             {
+              test: [/\.svg?/, /\.otf?/, /\.ttf?/, /\.woff?/, /\.woff2?/]
               use: [
                 {
                   loader: require.resolve('file-loader'),
