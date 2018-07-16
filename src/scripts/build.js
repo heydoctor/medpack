@@ -85,7 +85,7 @@ module.exports = function buildReactApp({ config: configPath }) {
         const publicPath = config.output.publicPath;
         const buildFolder = path.relative(process.cwd(), paths.appBuild);
         printHostingInstructions(appPackage, publicUrl, publicPath, buildFolder, paths.useYarn);
-        printBrowsers(paths.appPath);
+
         process.exit(0);
       },
       err => {
