@@ -1,6 +1,6 @@
 {
   "name": "quantumpack",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Extensible, opinionated webpack configuration",
   "engines": {
     "node": ">= 8.0.0",
@@ -20,7 +20,6 @@
     "release": "npm run publish && git push --follow-tags"
   },
   "author": "Kyle Alwyn <kyle@sappira.com>",
-  "license": "MIT",
   "dependencies": {
     "@babel/cli": "^7.0.0-beta.53",
     "@babel/core": "7.0.0-beta.53",
