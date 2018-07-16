@@ -102,22 +102,25 @@ module.exports = ({ mode, paths, env, sourceMaps }) => {
             // Process application JS with Babel.
             // The preset includes JSX, Flow, and some ESnext features.
             {
-              test: /\.(js|jsx|mjs)$/,
+              test: /(js|jsx)$/,
               // include: paths.srcPaths,
-              exclude: [/[/\\\\]node_modules[/\\\\]/],
+              exclude: /node_modules/,
               use: [
                 // This loader parallelizes code compilation, it is optional but
                 // improves compile time on larger projects
-                {
-                  loader: require.resolve('thread-loader'),
-                  options: {
-                    poolTimeout: Infinity, // keep workers alive for more effective watch mode
-                  },
-                },
+                // {
+                //   loader: require.resolve('thread-loader'),
+                //   options: {
+                //     poolTimeout: Infinity, // keep workers alive for more effective watch mode
+                //   },
+                // },
                 {
                   loader: require.resolve('babel-loader'),
                   options: {
-                    presets: [require.resolve('babel-preset-react-app')],
+                    presets: [
+                      require.resolve('@babel/preset-env'),
+                      require.resolve('@babel/preset-react'),
+                    ],
                     // This is a feature of `babel-loader` for webpack (not Babel itself).
                     // It enables caching results in ./node_modules/.cache/babel-loader/
                     // directory for faster rebuilds.
@@ -129,29 +132,29 @@ module.exports = ({ mode, paths, env, sourceMaps }) => {
             },
             // Process any JS outside of the app with Babel.
             // Unlike the application JS, we only compile the standard ES features.
-            {
-              test: /\.js$/,
-              use: [
-                // This loader parallelizes code compilation, it is optional but
-                // improves compile time on larger projects
-                {
-                  loader: require.resolve('thread-loader'),
-                  options: {
-                    poolTimeout: Infinity, // keep workers alive for more effective watch mode
-                  },
-                },
-                {
-                  loader: require.resolve('babel-loader'),
-                  options: {
-                    babelrc: false,
-                    compact: false,
-                    presets: [require.resolve('babel-preset-react-app/dependencies')],
-                    cacheDirectory: true,
-                    highlightCode: true,
-                  },
-                },
-              ],
-            },
+            // {
+            //   test: /\.js$/,
+            //   use: [
+            //     // This loader parallelizes code compilation, it is optional but
+            //     // improves compile time on larger projects
+            //     // {
+            //     //   loader: require.resolve('thread-loader'),
+            //     //   options: {
+            //     //     poolTimeout: Infinity, // keep workers alive for more effective watch mode
+            //     //   },
+            //     // },
+            //     {
+            //       loader: require.resolve('babel-loader'),
+            //       options: {
+            //         babelrc: false,
+            //         compact: false,
+            //         presets: [require.resolve('babel-preset-react-app/dependencies')],
+            //         cacheDirectory: true,
+            //         highlightCode: true,
+            //       },
+            //     },
+            //   ],
+            // },
             // Allows you to use two kinds of imports for SVG:
             // import logoUrl from './logo.svg'; gives you the URL.
             // import { ReactComponent as Logo } from './logo.svg'; gives you a component.
@@ -162,7 +165,10 @@ module.exports = ({ mode, paths, env, sourceMaps }) => {
                   loader: require.resolve('babel-loader'),
                   options: {
                     babelrc: false,
-                    presets: [require.resolve('babel-preset-react-app')],
+                    presets: [
+                      require.resolve('@babel/preset-env'),
+                      require.resolve('@babel/preset-react')
+                    ],
                     cacheDirectory: true,
                   },
                 },
