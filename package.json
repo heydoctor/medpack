@@ -1,6 +1,6 @@
 {
   "name": "quantumpack",
-  "version": "0.0.18",
+  "version": "0.0.19",
   "description": "Extensible, opinionated webpack configuration",
   "engines": {
     "node": ">= 8.0.0",
@@ -38,6 +38,7 @@
     "babel-eslint": "8.2.6",
     "babel-jest": "23.4.0",
     "babel-loader": "8.0.0-beta.4",
+    "babel-plugin-lodash": "^3.3.4",
     "babel-preset-react-app": "4.0.0-next.3e165448",
     "bfj": "6.1.1",
     "case-sensitive-paths-webpack-plugin": "2.1.2",

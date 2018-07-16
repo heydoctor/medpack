@@ -136,11 +136,12 @@ module.exports = ({ mode, paths, env, sourceMaps }) => {
                       ],
                       require.resolve('@babel/plugin-syntax-dynamic-import'),
                       require.resolve('@babel/plugin-proposal-export-default-from'),
+                      require.resolve('babel-plugin-lodash')
                     ],
                     // This is a feature of `babel-loader` for webpack (not Babel itself).
                     // It enables caching results in ./node_modules/.cache/babel-loader/
                     // directory for faster rebuilds.
-                    cacheDirectory: true,
+                    cacheDirectory: false,
                     highlightCode: true,
                   },
                 },
