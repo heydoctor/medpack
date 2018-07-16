@@ -6,7 +6,6 @@ const ManifestPlugin = require('webpack-manifest-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 // const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 const InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin');
-const getCSSModuleLocalIdent = require('react-dev-utils/getCSSModuleLocalIdent');
 
 // Style files regexes
 const cssRegex = /\.css$/;
@@ -167,7 +166,6 @@ module.exports = ({ mode, paths, env, sourceMaps }) => {
                     cacheDirectory: true,
                   },
                 },
-                require.resolve('svgr/webpack'),
                 {
                   loader: require.resolve('file-loader'),
                   options: {
@@ -198,7 +196,7 @@ module.exports = ({ mode, paths, env, sourceMaps }) => {
                 importLoaders: 1,
                 sourceMap: enableSourceMaps,
                 modules: true,
-                getLocalIdent: getCSSModuleLocalIdent,
+                localIdentName: '[name]__[local]___[hash:base64:5]',
               }),
             },
             // Opt-in support for SASS (using .scss or .sass extensions).
@@ -220,7 +218,7 @@ module.exports = ({ mode, paths, env, sourceMaps }) => {
                   importLoaders: 2,
                   sourceMap: enableSourceMaps,
                   modules: true,
-                  getLocalIdent: getCSSModuleLocalIdent,
+                  localIdentName: '[name]__[local]___[hash:base64:5]',
                 },
                 'sass-loader'
               ),
