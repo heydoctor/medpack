@@ -71,23 +71,25 @@ module.exports = ({ mode, paths, env, sourceMaps }) => {
     },
     optimization: {
       splitChunks: {
-        default: false,
-        vendors: false,
-        // vendor chunk
-        vendor: {
-          name: 'vendor',
-          chunks: 'all',
-          test: /node_modules/,
-          priority: 20
-        },
-        // common chunk
-        common: {
-          name: 'common',
-          minChunks: 2,
-          chunks: 'async',
-          priority: 10,
-          reuseExistingChunk: true,
-          enforce: true
+        cacheGroups: {
+          default: false,
+          vendors: false,
+          // vendor chunk
+          vendor: {
+            name: 'vendor',
+            chunks: 'all',
+            test: /node_modules/,
+            priority: 20
+          },
+          // common chunk
+          common: {
+            name: 'common',
+            minChunks: 2,
+            chunks: 'async',
+            priority: 10,
+            reuseExistingChunk: true,
+            enforce: true
+          }
         }
       },
       // Keep the runtime chunk seperated to enable long term caching
