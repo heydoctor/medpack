@@ -167,31 +167,6 @@ module.exports = ({ mode, paths, env, sourceMaps }) => {
                 },
               ],
             },
-            // Allows you to use two kinds of imports for SVG:
-            // import logoUrl from './logo.svg'; gives you the URL.
-            // import { ReactComponent as Logo } from './logo.svg'; gives you a component.
-            {
-              test: /\.svg$/,
-              use: [
-                {
-                  loader: require.resolve('babel-loader'),
-                  options: {
-                    babelrc: false,
-                    presets: [
-                      require.resolve('@babel/preset-env'),
-                      require.resolve('@babel/preset-react')
-                    ],
-                    cacheDirectory: true,
-                  },
-                },
-                {
-                  loader: require.resolve('file-loader'),
-                  options: {
-                    name: 'static/media/[name].[hash:8].[ext]',
-                  },
-                },
-              ],
-            },
             // "postcss" loader applies autoprefixer to our CSS.
             // "css" loader resolves paths in CSS and adds assets as dependencies.
             // "style" loader turns CSS into JS modules that inject <style> tags.
@@ -242,6 +217,17 @@ module.exports = ({ mode, paths, env, sourceMaps }) => {
                 },
                 'sass-loader'
               ),
+            },
+            // Catch-all
+            {
+              use: [
+                {
+                  loader: require.resolve('file-loader'),
+                  options: {
+                    name: 'static/media/[name].[hash:8].[ext]',
+                  },
+                },
+              ],
             },
           ],
         },
