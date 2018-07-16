@@ -77,9 +77,9 @@ module.exports = ({ mode, paths, env, sourceMaps }) => {
         vendor: {
           name: 'vendor',
           chunks: 'all',
-          test: /node_modules/
+          test: /node_modules/,
           priority: 20
-        }
+        },
         // common chunk
         common: {
           name: 'common',
