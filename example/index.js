@@ -10,7 +10,7 @@ class App extends React.Component {
     return (
       <div>
         <img src={logo} alt="" width="100" />
-        <h1 className={styles.title}>Hello Quantumpack!</h1>
+        <h1 className={styles.pageTitle}>Hello Quantumpack!</h1>
         <Counter />
       </div>
     );

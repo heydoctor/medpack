@@ -108,17 +108,17 @@ module.exports = ({ mode, paths, env, sourceMaps }) => {
               use: [
                 // This loader parallelizes code compilation, it is optional but
                 // improves compile time on larger projects
-                // {
-                //   loader: require.resolve('thread-loader'),
-                //   options: {
-                //     poolTimeout: Infinity, // keep workers alive for more effective watch mode
-                //   },
-                // },
+                {
+                  loader: require.resolve('thread-loader'),
+                  options: {
+                    poolTimeout: Infinity, // keep workers alive for more effective watch mode
+                  },
+                },
                 {
                   loader: require.resolve('babel-loader'),
                   options: {
                     presets: [
-                      [require.resolve('@babel/preset-env'), { useBuiltIns: 'entry' }],
+                      [require.resolve('@babel/preset-env'), { useBuiltIns: 'entry', modules: false }],
                       [require.resolve('@babel/preset-react'), { development: mode === 'development', useBuiltIns: true }],
                     ],
                     plugins: [
@@ -134,6 +134,7 @@ module.exports = ({ mode, paths, env, sourceMaps }) => {
                         },
                       ],
                       require.resolve('@babel/plugin-syntax-dynamic-import'),
+                      require.resolve('@babel/plugin-proposal-export-default-from'),
                     ],
                     // This is a feature of `babel-loader` for webpack (not Babel itself).
                     // It enables caching results in ./node_modules/.cache/babel-loader/
@@ -191,6 +192,7 @@ module.exports = ({ mode, paths, env, sourceMaps }) => {
                 importLoaders: 1,
                 sourceMap: enableSourceMaps,
                 modules: true,
+                camelCase: true,
                 localIdentName: '[name]__[local]___[hash:base64:5]',
               }),
             },
@@ -213,6 +215,7 @@ module.exports = ({ mode, paths, env, sourceMaps }) => {
                   importLoaders: 2,
                   sourceMap: enableSourceMaps,
                   modules: true,
+                  camelCase: true,
                   localIdentName: '[name]__[local]___[hash:base64:5]',
                 },
                 'sass-loader'

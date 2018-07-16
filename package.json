@@ -1,6 +1,6 @@
 {
   "name": "quantumpack",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "description": "Extensible, opinionated webpack configuration",
   "engines": {
     "node": ">= 8.0.0",
@@ -41,7 +41,7 @@
     "bfj": "6.1.1",
     "case-sensitive-paths-webpack-plugin": "2.1.2",
     "chalk": "2.4.1",
-    "css-loader": "0.28.11",
+    "css-loader": "1.0.0",
     "dotenv": "6.0.0",
     "dotenv-expand": "4.2.0",
     "file-loader": "1.1.11",
