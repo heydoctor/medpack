@@ -71,12 +71,30 @@ module.exports = ({ mode, paths, env, sourceMaps }) => {
     },
     optimization: {
       splitChunks: {
-        chunks: 'all',
-        name: 'vendors',
+        default: false,
+        vendors: false,
+        // vendor chunk
+        vendor: {
+          name: 'vendor',
+          chunks: 'all',
+          test: /node_modules/
+          priority: 20
+        }
+        // common chunk
+        common: {
+          name: 'common',
+          minChunks: 2,
+          chunks: 'async',
+          priority: 10,
+          reuseExistingChunk: true,
+          enforce: true
+        }
       },
       // Keep the runtime chunk seperated to enable long term caching
       // https://twitter.com/wSokra/status/969679223278505985
-      runtimeChunk: true,
+      runtimeChunk: {
+        name: 'manifest'
+      },
     },
     module: {
       rules: [
