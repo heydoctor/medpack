@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`webpack.prod 1`] = `
+Object {
+  "devtool": false,
+  "entry": Array [
+    "/Users/kyle/dev/libraries/sappira-webpack/src/config/polyfills.js",
+    undefined,
+  ],
+  "mode": "production",
+  "optimization": Object {
+    "minimizer": Array [
+      UglifyJsPlugin {
+        "options": Object {
+          "cache": true,
+          "exclude": undefined,
+          "extractComments": false,
+          "include": undefined,
+          "parallel": true,
+          "sourceMap": false,
+          "test": /\\\\\\.js\\(\\\\\\?\\.\\*\\)\\?\\$/i,
+          "uglifyOptions": Object {
+            "compress": Object {
+              "comparisons": false,
+              "ecma": 5,
+              "warnings": false,
+            },
+            "mangle": Object {
+              "safari10": true,
+            },
+            "output": Object {
+              "ascii_only": true,
+              "comments": false,
+              "ecma": 5,
+            },
+            "parse": Object {
+              "ecma": 8,
+            },
+          },
+          "warningsFilter": [Function],
+        },
+        "sourceMapsCache": WeakMap {},
+      },
+      OptimizeCssAssetsWebpackPlugin {
+        "deleteAssetsMap": Object {},
+        "options": Object {
+          "assetNameRegExp": /\\\\\\.css\\$/g,
+          "assetProcessors": Array [
+            Object {
+              "phase": "compilation.optimize-chunk-assets",
+              "processor": [Function],
+              "regExp": /\\\\\\.css\\$/g,
+            },
+          ],
+          "canPrint": undefined,
+          "cssProcessor": [Function],
+          "cssProcessorOptions": Object {},
+        },
+        "phaseAssetProcessors": Object {
+          "compilation.optimize-assets": Array [],
+          "compilation.optimize-chunk-assets": Array [
+            Object {
+              "phase": "compilation.optimize-chunk-assets",
+              "processor": [Function],
+              "regExp": /\\\\\\.css\\$/g,
+            },
+          ],
+          "emit": Array [],
+        },
+        "pluginDescriptor": Object {
+          "name": "OptimizeCssAssetsWebpackPlugin",
+        },
+      },
+    ],
+  },
+  "output": Object {
+    "chunkFilename": "static/js/[name].[chunkhash:8].chunk.js",
+    "filename": "static/js/[name].[chunkhash:8].js",
+    "path": undefined,
+    "publicPath": undefined,
+  },
+  "plugins": Array [
+    MiniCssExtractPlugin {
+      "options": Object {
+        "chunkFilename": "static/css/[name].[contenthash:8].chunk.css",
+        "filename": "static/css/[name].[contenthash:8].css",
+      },
+    },
+  ],
+}
+`;

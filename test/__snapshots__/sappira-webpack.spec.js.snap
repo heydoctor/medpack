@@ -1,0 +1,714 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`quantumpack defaults to development 1`] = `
+Object {
+  "config": Object {
+    "devtool": "cheap-module-source-map",
+    "entry": Array [
+      "/Users/kyle/dev/libraries/sappira-webpack/src/config/polyfills.js",
+      "/Users/kyle/dev/libraries/sappira-webpack/node_modules/react-dev-utils/webpackHotDevClient.js",
+      "/Users/kyle/dev/libraries/sappira-webpack/src/index.js",
+    ],
+    "mode": "development",
+    "module": Object {
+      "rules": Array [
+        Object {
+          "parser": Object {
+            "requireEnsure": false,
+          },
+        },
+        Object {
+          "oneOf": Array [
+            Object {
+              "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/url-loader/dist/cjs.js",
+              "options": Object {
+                "limit": 10000,
+                "name": "static/media/[name].[hash:8].[ext]",
+              },
+              "test": Array [
+                /\\\\\\.bmp\\$/,
+                /\\\\\\.gif\\$/,
+                /\\\\\\.jpe\\?g\\$/,
+                /\\\\\\.png\\$/,
+              ],
+            },
+            Object {
+              "exclude": Array [
+                /\\[\\\\/\\\\\\\\\\\\\\\\\\]node_modules\\[\\\\/\\\\\\\\\\\\\\\\\\]/,
+              ],
+              "include": Array [
+                "/Users/kyle/dev/libraries/sappira-webpack/src",
+              ],
+              "test": /\\\\\\.\\(js\\|jsx\\|mjs\\)\\$/,
+              "use": Array [
+                Object {
+                  "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/thread-loader/dist/cjs.js",
+                  "options": Object {
+                    "poolTimeout": Infinity,
+                  },
+                },
+                Object {
+                  "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/babel-loader/lib/index.js",
+                  "options": Object {
+                    "cacheDirectory": true,
+                    "highlightCode": true,
+                    "presets": Array [
+                      "/Users/kyle/dev/libraries/sappira-webpack/node_modules/babel-preset-react-app/index.js",
+                    ],
+                  },
+                },
+              ],
+            },
+            Object {
+              "test": /\\\\\\.js\\$/,
+              "use": Array [
+                Object {
+                  "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/thread-loader/dist/cjs.js",
+                  "options": Object {
+                    "poolTimeout": Infinity,
+                  },
+                },
+                Object {
+                  "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/babel-loader/lib/index.js",
+                  "options": Object {
+                    "babelrc": false,
+                    "cacheDirectory": true,
+                    "compact": false,
+                    "highlightCode": true,
+                    "presets": Array [
+                      "/Users/kyle/dev/libraries/sappira-webpack/node_modules/babel-preset-react-app/dependencies.js",
+                    ],
+                  },
+                },
+              ],
+            },
+            Object {
+              "test": /\\\\\\.svg\\$/,
+              "use": Array [
+                Object {
+                  "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/babel-loader/lib/index.js",
+                  "options": Object {
+                    "babelrc": false,
+                    "cacheDirectory": true,
+                    "presets": Array [
+                      "/Users/kyle/dev/libraries/sappira-webpack/node_modules/babel-preset-react-app/index.js",
+                    ],
+                  },
+                },
+                "/Users/kyle/dev/libraries/sappira-webpack/node_modules/svgr/webpack.js",
+                Object {
+                  "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/file-loader/dist/cjs.js",
+                  "options": Object {
+                    "name": "static/media/[name].[hash:8].[ext]",
+                  },
+                },
+              ],
+            },
+            Object {
+              "exclude": /\\\\\\.module\\\\\\.css\\$/,
+              "test": /\\\\\\.css\\$/,
+              "use": Array [
+                "/Users/kyle/dev/libraries/sappira-webpack/node_modules/style-loader/index.js",
+                Object {
+                  "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/css-loader/index.js",
+                  "options": Object {
+                    "importLoaders": 1,
+                    "sourceMap": false,
+                  },
+                },
+                Object {
+                  "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/postcss-loader/lib/index.js",
+                  "options": Object {
+                    "ident": "postcss",
+                    "plugins": [Function],
+                    "sourceMap": false,
+                  },
+                },
+              ],
+            },
+            Object {
+              "test": /\\\\\\.module\\\\\\.css\\$/,
+              "use": Array [
+                "/Users/kyle/dev/libraries/sappira-webpack/node_modules/style-loader/index.js",
+                Object {
+                  "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/css-loader/index.js",
+                  "options": Object {
+                    "getLocalIdent": [Function],
+                    "importLoaders": 1,
+                    "modules": true,
+                    "sourceMap": false,
+                  },
+                },
+                Object {
+                  "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/postcss-loader/lib/index.js",
+                  "options": Object {
+                    "ident": "postcss",
+                    "plugins": [Function],
+                    "sourceMap": false,
+                  },
+                },
+              ],
+            },
+            Object {
+              "exclude": /\\\\\\.module\\\\\\.\\(scss\\|sass\\)\\$/,
+              "test": /\\\\\\.\\(scss\\|sass\\)\\$/,
+              "use": Array [
+                "/Users/kyle/dev/libraries/sappira-webpack/node_modules/style-loader/index.js",
+                Object {
+                  "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/css-loader/index.js",
+                  "options": Object {
+                    "importLoaders": 2,
+                    "sourceMap": false,
+                  },
+                },
+                Object {
+                  "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/postcss-loader/lib/index.js",
+                  "options": Object {
+                    "ident": "postcss",
+                    "plugins": [Function],
+                    "sourceMap": false,
+                  },
+                },
+                Object {
+                  "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/sass-loader/lib/loader.js",
+                  "options": Object {
+                    "sourceMap": false,
+                  },
+                },
+              ],
+            },
+            Object {
+              "test": /\\\\\\.module\\\\\\.\\(scss\\|sass\\)\\$/,
+              "use": Array [
+                "/Users/kyle/dev/libraries/sappira-webpack/node_modules/style-loader/index.js",
+                Object {
+                  "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/css-loader/index.js",
+                  "options": Object {
+                    "getLocalIdent": [Function],
+                    "importLoaders": 2,
+                    "modules": true,
+                    "sourceMap": false,
+                  },
+                },
+                Object {
+                  "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/postcss-loader/lib/index.js",
+                  "options": Object {
+                    "ident": "postcss",
+                    "plugins": [Function],
+                    "sourceMap": false,
+                  },
+                },
+                Object {
+                  "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/sass-loader/lib/loader.js",
+                  "options": Object {
+                    "sourceMap": false,
+                  },
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    "optimization": Object {
+      "runtimeChunk": true,
+      "splitChunks": Object {
+        "chunks": "all",
+        "name": "vendors",
+      },
+    },
+    "output": Object {
+      "chunkFilename": "static/js/[name].chunk.js",
+      "devtoolModuleFilenameTemplate": [Function],
+      "filename": "static/js/bundle.js",
+      "pathinfo": true,
+      "publicPath": "/",
+    },
+    "plugins": Array [
+      HtmlWebpackPlugin {
+        "options": Object {
+          "cache": true,
+          "chunks": "all",
+          "chunksSortMode": "auto",
+          "compile": true,
+          "excludeChunks": Array [],
+          "favicon": false,
+          "filename": "index.html",
+          "hash": false,
+          "inject": true,
+          "meta": Object {},
+          "minify": Object {
+            "collapseWhitespace": true,
+            "keepClosingSlash": true,
+            "minifyCSS": true,
+            "minifyJS": true,
+            "minifyURLs": true,
+            "removeComments": true,
+            "removeEmptyAttributes": true,
+            "removeRedundantAttributes": true,
+            "removeStyleLinkTypeAttributes": true,
+            "useShortDoctype": true,
+          },
+          "showErrors": true,
+          "template": "/Users/kyle/dev/libraries/sappira-webpack/public/index.html",
+          "templateParameters": [Function],
+          "title": "Webpack App",
+          "xhtml": false,
+        },
+      },
+      InterpolateHtmlPlugin {
+        "replacements": Object {
+          "NODE_ENV": "test",
+          "PUBLIC_URL": "/",
+        },
+      },
+      DefinePlugin {
+        "definitions": Object {
+          "process.env": Object {
+            "NODE_ENV": undefined,
+            "PUBLIC_URL": undefined,
+          },
+        },
+      },
+      ManifestPlugin {
+        "opts": Object {
+          "basePath": "",
+          "fileName": "asset-manifest.json",
+          "filter": null,
+          "generate": null,
+          "map": null,
+          "publicPath": "/",
+          "seed": null,
+          "serialize": [Function],
+          "sort": null,
+          "transformExtensions": /\\^\\(gz\\|map\\)\\$/i,
+          "writeToFileEmit": false,
+        },
+      },
+      HotModuleReplacementPlugin {
+        "fullBuildTimeout": 200,
+        "multiStep": undefined,
+        "options": Object {},
+        "requestTimeout": 10000,
+      },
+      CaseSensitivePathsPlugin {
+        "fsOperations": 0,
+        "options": Object {},
+        "pathCache": Object {},
+        "primed": false,
+      },
+      WatchMissingNodeModulesPlugin {
+        "nodeModulesPath": "/Users/kyle/dev/libraries/sappira-webpack/node_modules",
+      },
+    ],
+    "stats": Object {
+      "children": false,
+    },
+  },
+  "env": Object {
+    "NODE_ENV": "test",
+    "PUBLIC_URL": "/",
+  },
+  "paths": Object {
+    "appBuild": "/Users/kyle/dev/libraries/sappira-webpack/build",
+    "appHtml": "/Users/kyle/dev/libraries/sappira-webpack/public/index.html",
+    "appIndexJs": "/Users/kyle/dev/libraries/sappira-webpack/src/index.js",
+    "appNodeModules": "/Users/kyle/dev/libraries/sappira-webpack/node_modules",
+    "appPackageJson": "/Users/kyle/dev/libraries/sappira-webpack/package.json",
+    "appPath": "/Users/kyle/dev/libraries/sappira-webpack",
+    "appPublic": "/Users/kyle/dev/libraries/sappira-webpack/public",
+    "appSrc": "/Users/kyle/dev/libraries/sappira-webpack/src",
+    "dotenv": "/Users/kyle/dev/libraries/sappira-webpack/.env",
+    "publicUrl": undefined,
+    "servedPath": "/",
+    "srcPaths": Array [
+      "/Users/kyle/dev/libraries/sappira-webpack/src",
+    ],
+    "testsSetup": "/Users/kyle/dev/libraries/sappira-webpack/src/setupTests.js",
+    "useYarn": true,
+  },
+}
+`;
+
+exports[`quantumpack production 1`] = `
+Object {
+  "config": Object {
+    "devtool": false,
+    "entry": Array [
+      "/Users/kyle/dev/libraries/sappira-webpack/src/config/polyfills.js",
+      "/Users/kyle/dev/libraries/sappira-webpack/src/index.js",
+    ],
+    "mode": "production",
+    "module": Object {
+      "rules": Array [
+        Object {
+          "parser": Object {
+            "requireEnsure": false,
+          },
+        },
+        Object {
+          "oneOf": Array [
+            Object {
+              "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/url-loader/dist/cjs.js",
+              "options": Object {
+                "limit": 10000,
+                "name": "static/media/[name].[hash:8].[ext]",
+              },
+              "test": Array [
+                /\\\\\\.bmp\\$/,
+                /\\\\\\.gif\\$/,
+                /\\\\\\.jpe\\?g\\$/,
+                /\\\\\\.png\\$/,
+              ],
+            },
+            Object {
+              "exclude": Array [
+                /\\[\\\\/\\\\\\\\\\\\\\\\\\]node_modules\\[\\\\/\\\\\\\\\\\\\\\\\\]/,
+              ],
+              "include": Array [
+                "/Users/kyle/dev/libraries/sappira-webpack/src",
+              ],
+              "test": /\\\\\\.\\(js\\|jsx\\|mjs\\)\\$/,
+              "use": Array [
+                Object {
+                  "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/thread-loader/dist/cjs.js",
+                  "options": Object {
+                    "poolTimeout": Infinity,
+                  },
+                },
+                Object {
+                  "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/babel-loader/lib/index.js",
+                  "options": Object {
+                    "cacheDirectory": true,
+                    "highlightCode": true,
+                    "presets": Array [
+                      "/Users/kyle/dev/libraries/sappira-webpack/node_modules/babel-preset-react-app/index.js",
+                    ],
+                  },
+                },
+              ],
+            },
+            Object {
+              "test": /\\\\\\.js\\$/,
+              "use": Array [
+                Object {
+                  "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/thread-loader/dist/cjs.js",
+                  "options": Object {
+                    "poolTimeout": Infinity,
+                  },
+                },
+                Object {
+                  "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/babel-loader/lib/index.js",
+                  "options": Object {
+                    "babelrc": false,
+                    "cacheDirectory": true,
+                    "compact": false,
+                    "highlightCode": true,
+                    "presets": Array [
+                      "/Users/kyle/dev/libraries/sappira-webpack/node_modules/babel-preset-react-app/dependencies.js",
+                    ],
+                  },
+                },
+              ],
+            },
+            Object {
+              "test": /\\\\\\.svg\\$/,
+              "use": Array [
+                Object {
+                  "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/babel-loader/lib/index.js",
+                  "options": Object {
+                    "babelrc": false,
+                    "cacheDirectory": true,
+                    "presets": Array [
+                      "/Users/kyle/dev/libraries/sappira-webpack/node_modules/babel-preset-react-app/index.js",
+                    ],
+                  },
+                },
+                "/Users/kyle/dev/libraries/sappira-webpack/node_modules/svgr/webpack.js",
+                Object {
+                  "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/file-loader/dist/cjs.js",
+                  "options": Object {
+                    "name": "static/media/[name].[hash:8].[ext]",
+                  },
+                },
+              ],
+            },
+            Object {
+              "exclude": /\\\\\\.module\\\\\\.css\\$/,
+              "test": /\\\\\\.css\\$/,
+              "use": Array [
+                "/Users/kyle/dev/libraries/sappira-webpack/node_modules/mini-css-extract-plugin/dist/loader.js",
+                Object {
+                  "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/css-loader/index.js",
+                  "options": Object {
+                    "importLoaders": 1,
+                    "sourceMap": undefined,
+                  },
+                },
+                Object {
+                  "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/postcss-loader/lib/index.js",
+                  "options": Object {
+                    "ident": "postcss",
+                    "plugins": [Function],
+                    "sourceMap": undefined,
+                  },
+                },
+              ],
+            },
+            Object {
+              "test": /\\\\\\.module\\\\\\.css\\$/,
+              "use": Array [
+                "/Users/kyle/dev/libraries/sappira-webpack/node_modules/mini-css-extract-plugin/dist/loader.js",
+                Object {
+                  "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/css-loader/index.js",
+                  "options": Object {
+                    "getLocalIdent": [Function],
+                    "importLoaders": 1,
+                    "modules": true,
+                    "sourceMap": undefined,
+                  },
+                },
+                Object {
+                  "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/postcss-loader/lib/index.js",
+                  "options": Object {
+                    "ident": "postcss",
+                    "plugins": [Function],
+                    "sourceMap": undefined,
+                  },
+                },
+              ],
+            },
+            Object {
+              "exclude": /\\\\\\.module\\\\\\.\\(scss\\|sass\\)\\$/,
+              "test": /\\\\\\.\\(scss\\|sass\\)\\$/,
+              "use": Array [
+                "/Users/kyle/dev/libraries/sappira-webpack/node_modules/mini-css-extract-plugin/dist/loader.js",
+                Object {
+                  "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/css-loader/index.js",
+                  "options": Object {
+                    "importLoaders": 2,
+                    "sourceMap": undefined,
+                  },
+                },
+                Object {
+                  "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/postcss-loader/lib/index.js",
+                  "options": Object {
+                    "ident": "postcss",
+                    "plugins": [Function],
+                    "sourceMap": undefined,
+                  },
+                },
+                Object {
+                  "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/sass-loader/lib/loader.js",
+                  "options": Object {
+                    "sourceMap": undefined,
+                  },
+                },
+              ],
+            },
+            Object {
+              "test": /\\\\\\.module\\\\\\.\\(scss\\|sass\\)\\$/,
+              "use": Array [
+                "/Users/kyle/dev/libraries/sappira-webpack/node_modules/mini-css-extract-plugin/dist/loader.js",
+                Object {
+                  "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/css-loader/index.js",
+                  "options": Object {
+                    "getLocalIdent": [Function],
+                    "importLoaders": 2,
+                    "modules": true,
+                    "sourceMap": undefined,
+                  },
+                },
+                Object {
+                  "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/postcss-loader/lib/index.js",
+                  "options": Object {
+                    "ident": "postcss",
+                    "plugins": [Function],
+                    "sourceMap": undefined,
+                  },
+                },
+                Object {
+                  "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/sass-loader/lib/loader.js",
+                  "options": Object {
+                    "sourceMap": undefined,
+                  },
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    "optimization": Object {
+      "minimizer": Array [
+        UglifyJsPlugin {
+          "options": Object {
+            "cache": true,
+            "exclude": undefined,
+            "extractComments": false,
+            "include": undefined,
+            "parallel": true,
+            "sourceMap": false,
+            "test": /\\\\\\.js\\(\\\\\\?\\.\\*\\)\\?\\$/i,
+            "uglifyOptions": Object {
+              "compress": Object {
+                "comparisons": false,
+                "ecma": 5,
+                "warnings": false,
+              },
+              "mangle": Object {
+                "safari10": true,
+              },
+              "output": Object {
+                "ascii_only": true,
+                "comments": false,
+                "ecma": 5,
+              },
+              "parse": Object {
+                "ecma": 8,
+              },
+            },
+            "warningsFilter": [Function],
+          },
+          "sourceMapsCache": WeakMap {},
+        },
+        OptimizeCssAssetsWebpackPlugin {
+          "deleteAssetsMap": Object {},
+          "options": Object {
+            "assetNameRegExp": /\\\\\\.css\\$/g,
+            "assetProcessors": Array [
+              Object {
+                "phase": "compilation.optimize-chunk-assets",
+                "processor": [Function],
+                "regExp": /\\\\\\.css\\$/g,
+              },
+            ],
+            "canPrint": undefined,
+            "cssProcessor": [Function],
+            "cssProcessorOptions": Object {},
+          },
+          "phaseAssetProcessors": Object {
+            "compilation.optimize-assets": Array [],
+            "compilation.optimize-chunk-assets": Array [
+              Object {
+                "phase": "compilation.optimize-chunk-assets",
+                "processor": [Function],
+                "regExp": /\\\\\\.css\\$/g,
+              },
+            ],
+            "emit": Array [],
+          },
+          "pluginDescriptor": Object {
+            "name": "OptimizeCssAssetsWebpackPlugin",
+          },
+        },
+      ],
+      "runtimeChunk": true,
+      "splitChunks": Object {
+        "chunks": "all",
+        "name": "vendors",
+      },
+    },
+    "output": Object {
+      "chunkFilename": "static/js/[name].[chunkhash:8].chunk.js",
+      "devtoolModuleFilenameTemplate": [Function],
+      "filename": "static/js/[name].[chunkhash:8].js",
+      "path": "/Users/kyle/dev/libraries/sappira-webpack/build",
+      "publicPath": "/",
+    },
+    "plugins": Array [
+      HtmlWebpackPlugin {
+        "options": Object {
+          "cache": true,
+          "chunks": "all",
+          "chunksSortMode": "auto",
+          "compile": true,
+          "excludeChunks": Array [],
+          "favicon": false,
+          "filename": "index.html",
+          "hash": false,
+          "inject": true,
+          "meta": Object {},
+          "minify": Object {
+            "collapseWhitespace": true,
+            "keepClosingSlash": true,
+            "minifyCSS": true,
+            "minifyJS": true,
+            "minifyURLs": true,
+            "removeComments": true,
+            "removeEmptyAttributes": true,
+            "removeRedundantAttributes": true,
+            "removeStyleLinkTypeAttributes": true,
+            "useShortDoctype": true,
+          },
+          "showErrors": true,
+          "template": "/Users/kyle/dev/libraries/sappira-webpack/public/index.html",
+          "templateParameters": [Function],
+          "title": "Webpack App",
+          "xhtml": false,
+        },
+      },
+      InterpolateHtmlPlugin {
+        "replacements": Object {
+          "NODE_ENV": "test",
+          "PUBLIC_URL": "",
+        },
+      },
+      DefinePlugin {
+        "definitions": Object {
+          "process.env": Object {
+            "NODE_ENV": undefined,
+            "PUBLIC_URL": undefined,
+          },
+        },
+      },
+      ManifestPlugin {
+        "opts": Object {
+          "basePath": "",
+          "fileName": "asset-manifest.json",
+          "filter": null,
+          "generate": null,
+          "map": null,
+          "publicPath": "/",
+          "seed": null,
+          "serialize": [Function],
+          "sort": null,
+          "transformExtensions": /\\^\\(gz\\|map\\)\\$/i,
+          "writeToFileEmit": false,
+        },
+      },
+      MiniCssExtractPlugin {
+        "options": Object {
+          "chunkFilename": "static/css/[name].[contenthash:8].chunk.css",
+          "filename": "static/css/[name].[contenthash:8].css",
+        },
+      },
+    ],
+    "stats": Object {
+      "children": false,
+    },
+  },
+  "env": Object {
+    "NODE_ENV": "test",
+    "PUBLIC_URL": "",
+  },
+  "paths": Object {
+    "appBuild": "/Users/kyle/dev/libraries/sappira-webpack/build",
+    "appHtml": "/Users/kyle/dev/libraries/sappira-webpack/public/index.html",
+    "appIndexJs": "/Users/kyle/dev/libraries/sappira-webpack/src/index.js",
+    "appNodeModules": "/Users/kyle/dev/libraries/sappira-webpack/node_modules",
+    "appPackageJson": "/Users/kyle/dev/libraries/sappira-webpack/package.json",
+    "appPath": "/Users/kyle/dev/libraries/sappira-webpack",
+    "appPublic": "/Users/kyle/dev/libraries/sappira-webpack/public",
+    "appSrc": "/Users/kyle/dev/libraries/sappira-webpack/src",
+    "dotenv": "/Users/kyle/dev/libraries/sappira-webpack/.env",
+    "publicUrl": undefined,
+    "servedPath": "/",
+    "srcPaths": Array [
+      "/Users/kyle/dev/libraries/sappira-webpack/src",
+    ],
+    "testsSetup": "/Users/kyle/dev/libraries/sappira-webpack/src/setupTests.js",
+    "useYarn": true,
+  },
+}
+`;

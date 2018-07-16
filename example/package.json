@@ -1,0 +1,22 @@
+{
+  "scripts": {
+    "start": "../src/cli.js start -c ./quantumpack.js",
+    "build": "../src/cli.js build -c ./quantumpack.js"
+  },
+  "dependencies": {
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1"
+  },
+  "browserslist": {
+    "development": [
+      "last 2 chrome versions",
+      "last 2 firefox versions",
+      "last 2 edge versions"
+    ],
+    "production": [
+      ">0.25%",
+      "not op_mini all",
+      "ie 11"
+    ]
+  }
+}
