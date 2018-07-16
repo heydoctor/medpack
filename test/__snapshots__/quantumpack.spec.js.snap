@@ -5,9 +5,9 @@ Object {
   "config": Object {
     "devtool": "cheap-module-source-map",
     "entry": Array [
-      "/Users/kyle/dev/libraries/sappira-webpack/src/config/polyfills.js",
-      "/Users/kyle/dev/libraries/sappira-webpack/node_modules/react-dev-utils/webpackHotDevClient.js",
-      "/Users/kyle/dev/libraries/sappira-webpack/src/index.js",
+      "/Users/kyle/dev/libraries/quantumpack/src/config/polyfills.js",
+      "/Users/kyle/dev/libraries/quantumpack/node_modules/react-dev-utils/webpackHotDevClient.js",
+      "/Users/kyle/dev/libraries/quantumpack/src/index.js",
     ],
     "mode": "development",
     "module": Object {
@@ -20,7 +20,7 @@ Object {
         Object {
           "oneOf": Array [
             Object {
-              "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/url-loader/dist/cjs.js",
+              "loader": "/Users/kyle/dev/libraries/quantumpack/node_modules/url-loader/dist/cjs.js",
               "options": Object {
                 "limit": 10000,
                 "name": "static/media/[name].[hash:8].[ext]",
@@ -36,24 +36,21 @@ Object {
               "exclude": Array [
                 /\\[\\\\/\\\\\\\\\\\\\\\\\\]node_modules\\[\\\\/\\\\\\\\\\\\\\\\\\]/,
               ],
-              "include": Array [
-                "/Users/kyle/dev/libraries/sappira-webpack/src",
-              ],
               "test": /\\\\\\.\\(js\\|jsx\\|mjs\\)\\$/,
               "use": Array [
                 Object {
-                  "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/thread-loader/dist/cjs.js",
+                  "loader": "/Users/kyle/dev/libraries/quantumpack/node_modules/thread-loader/dist/cjs.js",
                   "options": Object {
                     "poolTimeout": Infinity,
                   },
                 },
                 Object {
-                  "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/babel-loader/lib/index.js",
+                  "loader": "/Users/kyle/dev/libraries/quantumpack/node_modules/babel-loader/lib/index.js",
                   "options": Object {
                     "cacheDirectory": true,
                     "highlightCode": true,
                     "presets": Array [
-                      "/Users/kyle/dev/libraries/sappira-webpack/node_modules/babel-preset-react-app/index.js",
+                      "/Users/kyle/dev/libraries/quantumpack/node_modules/babel-preset-react-app/index.js",
                     ],
                   },
                 },
@@ -63,20 +60,20 @@ Object {
               "test": /\\\\\\.js\\$/,
               "use": Array [
                 Object {
-                  "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/thread-loader/dist/cjs.js",
+                  "loader": "/Users/kyle/dev/libraries/quantumpack/node_modules/thread-loader/dist/cjs.js",
                   "options": Object {
                     "poolTimeout": Infinity,
                   },
                 },
                 Object {
-                  "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/babel-loader/lib/index.js",
+                  "loader": "/Users/kyle/dev/libraries/quantumpack/node_modules/babel-loader/lib/index.js",
                   "options": Object {
                     "babelrc": false,
                     "cacheDirectory": true,
                     "compact": false,
                     "highlightCode": true,
                     "presets": Array [
-                      "/Users/kyle/dev/libraries/sappira-webpack/node_modules/babel-preset-react-app/dependencies.js",
+                      "/Users/kyle/dev/libraries/quantumpack/node_modules/babel-preset-react-app/dependencies.js",
                     ],
                   },
                 },
@@ -86,18 +83,18 @@ Object {
               "test": /\\\\\\.svg\\$/,
               "use": Array [
                 Object {
-                  "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/babel-loader/lib/index.js",
+                  "loader": "/Users/kyle/dev/libraries/quantumpack/node_modules/babel-loader/lib/index.js",
                   "options": Object {
                     "babelrc": false,
                     "cacheDirectory": true,
                     "presets": Array [
-                      "/Users/kyle/dev/libraries/sappira-webpack/node_modules/babel-preset-react-app/index.js",
+                      "/Users/kyle/dev/libraries/quantumpack/node_modules/babel-preset-react-app/index.js",
                     ],
                   },
                 },
-                "/Users/kyle/dev/libraries/sappira-webpack/node_modules/svgr/webpack.js",
+                "/Users/kyle/dev/libraries/quantumpack/node_modules/svgr/webpack.js",
                 Object {
-                  "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/file-loader/dist/cjs.js",
+                  "loader": "/Users/kyle/dev/libraries/quantumpack/node_modules/file-loader/dist/cjs.js",
                   "options": Object {
                     "name": "static/media/[name].[hash:8].[ext]",
                   },
@@ -108,16 +105,16 @@ Object {
               "exclude": /\\\\\\.module\\\\\\.css\\$/,
               "test": /\\\\\\.css\\$/,
               "use": Array [
-                "/Users/kyle/dev/libraries/sappira-webpack/node_modules/style-loader/index.js",
+                "/Users/kyle/dev/libraries/quantumpack/node_modules/style-loader/index.js",
                 Object {
-                  "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/css-loader/index.js",
+                  "loader": "/Users/kyle/dev/libraries/quantumpack/node_modules/css-loader/index.js",
                   "options": Object {
                     "importLoaders": 1,
                     "sourceMap": false,
                   },
                 },
                 Object {
-                  "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/postcss-loader/lib/index.js",
+                  "loader": "/Users/kyle/dev/libraries/quantumpack/node_modules/postcss-loader/lib/index.js",
                   "options": Object {
                     "ident": "postcss",
                     "plugins": [Function],
@@ -129,9 +126,9 @@ Object {
             Object {
               "test": /\\\\\\.module\\\\\\.css\\$/,
               "use": Array [
-                "/Users/kyle/dev/libraries/sappira-webpack/node_modules/style-loader/index.js",
+                "/Users/kyle/dev/libraries/quantumpack/node_modules/style-loader/index.js",
                 Object {
-                  "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/css-loader/index.js",
+                  "loader": "/Users/kyle/dev/libraries/quantumpack/node_modules/css-loader/index.js",
                   "options": Object {
                     "getLocalIdent": [Function],
                     "importLoaders": 1,
@@ -140,7 +137,7 @@ Object {
                   },
                 },
                 Object {
-                  "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/postcss-loader/lib/index.js",
+                  "loader": "/Users/kyle/dev/libraries/quantumpack/node_modules/postcss-loader/lib/index.js",
                   "options": Object {
                     "ident": "postcss",
                     "plugins": [Function],
@@ -153,16 +150,16 @@ Object {
               "exclude": /\\\\\\.module\\\\\\.\\(scss\\|sass\\)\\$/,
               "test": /\\\\\\.\\(scss\\|sass\\)\\$/,
               "use": Array [
-                "/Users/kyle/dev/libraries/sappira-webpack/node_modules/style-loader/index.js",
+                "/Users/kyle/dev/libraries/quantumpack/node_modules/style-loader/index.js",
                 Object {
-                  "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/css-loader/index.js",
+                  "loader": "/Users/kyle/dev/libraries/quantumpack/node_modules/css-loader/index.js",
                   "options": Object {
                     "importLoaders": 2,
                     "sourceMap": false,
                   },
                 },
                 Object {
-                  "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/postcss-loader/lib/index.js",
+                  "loader": "/Users/kyle/dev/libraries/quantumpack/node_modules/postcss-loader/lib/index.js",
                   "options": Object {
                     "ident": "postcss",
                     "plugins": [Function],
@@ -170,7 +167,7 @@ Object {
                   },
                 },
                 Object {
-                  "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/sass-loader/lib/loader.js",
+                  "loader": "/Users/kyle/dev/libraries/quantumpack/node_modules/sass-loader/lib/loader.js",
                   "options": Object {
                     "sourceMap": false,
                   },
@@ -180,9 +177,9 @@ Object {
             Object {
               "test": /\\\\\\.module\\\\\\.\\(scss\\|sass\\)\\$/,
               "use": Array [
-                "/Users/kyle/dev/libraries/sappira-webpack/node_modules/style-loader/index.js",
+                "/Users/kyle/dev/libraries/quantumpack/node_modules/style-loader/index.js",
                 Object {
-                  "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/css-loader/index.js",
+                  "loader": "/Users/kyle/dev/libraries/quantumpack/node_modules/css-loader/index.js",
                   "options": Object {
                     "getLocalIdent": [Function],
                     "importLoaders": 2,
@@ -191,7 +188,7 @@ Object {
                   },
                 },
                 Object {
-                  "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/postcss-loader/lib/index.js",
+                  "loader": "/Users/kyle/dev/libraries/quantumpack/node_modules/postcss-loader/lib/index.js",
                   "options": Object {
                     "ident": "postcss",
                     "plugins": [Function],
@@ -199,7 +196,7 @@ Object {
                   },
                 },
                 Object {
-                  "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/sass-loader/lib/loader.js",
+                  "loader": "/Users/kyle/dev/libraries/quantumpack/node_modules/sass-loader/lib/loader.js",
                   "options": Object {
                     "sourceMap": false,
                   },
@@ -250,7 +247,7 @@ Object {
             "useShortDoctype": true,
           },
           "showErrors": true,
-          "template": "/Users/kyle/dev/libraries/sappira-webpack/public/index.html",
+          "template": "/Users/kyle/dev/libraries/quantumpack/public/index.html",
           "templateParameters": [Function],
           "title": "Webpack App",
           "xhtml": false,
@@ -298,7 +295,7 @@ Object {
         "primed": false,
       },
       WatchMissingNodeModulesPlugin {
-        "nodeModulesPath": "/Users/kyle/dev/libraries/sappira-webpack/node_modules",
+        "nodeModulesPath": "/Users/kyle/dev/libraries/quantumpack/node_modules",
       },
     ],
     "stats": Object {
@@ -310,21 +307,21 @@ Object {
     "PUBLIC_URL": "/",
   },
   "paths": Object {
-    "appBuild": "/Users/kyle/dev/libraries/sappira-webpack/build",
-    "appHtml": "/Users/kyle/dev/libraries/sappira-webpack/public/index.html",
-    "appIndexJs": "/Users/kyle/dev/libraries/sappira-webpack/src/index.js",
-    "appNodeModules": "/Users/kyle/dev/libraries/sappira-webpack/node_modules",
-    "appPackageJson": "/Users/kyle/dev/libraries/sappira-webpack/package.json",
-    "appPath": "/Users/kyle/dev/libraries/sappira-webpack",
-    "appPublic": "/Users/kyle/dev/libraries/sappira-webpack/public",
-    "appSrc": "/Users/kyle/dev/libraries/sappira-webpack/src",
-    "dotenv": "/Users/kyle/dev/libraries/sappira-webpack/.env",
+    "appBuild": "/Users/kyle/dev/libraries/quantumpack/build",
+    "appHtml": "/Users/kyle/dev/libraries/quantumpack/public/index.html",
+    "appIndexJs": "/Users/kyle/dev/libraries/quantumpack/src/index.js",
+    "appNodeModules": "/Users/kyle/dev/libraries/quantumpack/node_modules",
+    "appPackageJson": "/Users/kyle/dev/libraries/quantumpack/package.json",
+    "appPath": "/Users/kyle/dev/libraries/quantumpack",
+    "appPublic": "/Users/kyle/dev/libraries/quantumpack/public",
+    "appSrc": "/Users/kyle/dev/libraries/quantumpack/src",
+    "dotenv": "/Users/kyle/dev/libraries/quantumpack/.env",
     "publicUrl": undefined,
     "servedPath": "/",
     "srcPaths": Array [
-      "/Users/kyle/dev/libraries/sappira-webpack/src",
+      "/Users/kyle/dev/libraries/quantumpack/src",
     ],
-    "testsSetup": "/Users/kyle/dev/libraries/sappira-webpack/src/setupTests.js",
+    "testsSetup": "/Users/kyle/dev/libraries/quantumpack/src/setupTests.js",
     "useYarn": true,
   },
 }
@@ -335,8 +332,8 @@ Object {
   "config": Object {
     "devtool": false,
     "entry": Array [
-      "/Users/kyle/dev/libraries/sappira-webpack/src/config/polyfills.js",
-      "/Users/kyle/dev/libraries/sappira-webpack/src/index.js",
+      "/Users/kyle/dev/libraries/quantumpack/src/config/polyfills.js",
+      "/Users/kyle/dev/libraries/quantumpack/src/index.js",
     ],
     "mode": "production",
     "module": Object {
@@ -349,7 +346,7 @@ Object {
         Object {
           "oneOf": Array [
             Object {
-              "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/url-loader/dist/cjs.js",
+              "loader": "/Users/kyle/dev/libraries/quantumpack/node_modules/url-loader/dist/cjs.js",
               "options": Object {
                 "limit": 10000,
                 "name": "static/media/[name].[hash:8].[ext]",
@@ -365,24 +362,21 @@ Object {
               "exclude": Array [
                 /\\[\\\\/\\\\\\\\\\\\\\\\\\]node_modules\\[\\\\/\\\\\\\\\\\\\\\\\\]/,
               ],
-              "include": Array [
-                "/Users/kyle/dev/libraries/sappira-webpack/src",
-              ],
               "test": /\\\\\\.\\(js\\|jsx\\|mjs\\)\\$/,
               "use": Array [
                 Object {
-                  "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/thread-loader/dist/cjs.js",
+                  "loader": "/Users/kyle/dev/libraries/quantumpack/node_modules/thread-loader/dist/cjs.js",
                   "options": Object {
                     "poolTimeout": Infinity,
                   },
                 },
                 Object {
-                  "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/babel-loader/lib/index.js",
+                  "loader": "/Users/kyle/dev/libraries/quantumpack/node_modules/babel-loader/lib/index.js",
                   "options": Object {
                     "cacheDirectory": true,
                     "highlightCode": true,
                     "presets": Array [
-                      "/Users/kyle/dev/libraries/sappira-webpack/node_modules/babel-preset-react-app/index.js",
+                      "/Users/kyle/dev/libraries/quantumpack/node_modules/babel-preset-react-app/index.js",
                     ],
                   },
                 },
@@ -392,20 +386,20 @@ Object {
               "test": /\\\\\\.js\\$/,
               "use": Array [
                 Object {
-                  "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/thread-loader/dist/cjs.js",
+                  "loader": "/Users/kyle/dev/libraries/quantumpack/node_modules/thread-loader/dist/cjs.js",
                   "options": Object {
                     "poolTimeout": Infinity,
                   },
                 },
                 Object {
-                  "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/babel-loader/lib/index.js",
+                  "loader": "/Users/kyle/dev/libraries/quantumpack/node_modules/babel-loader/lib/index.js",
                   "options": Object {
                     "babelrc": false,
                     "cacheDirectory": true,
                     "compact": false,
                     "highlightCode": true,
                     "presets": Array [
-                      "/Users/kyle/dev/libraries/sappira-webpack/node_modules/babel-preset-react-app/dependencies.js",
+                      "/Users/kyle/dev/libraries/quantumpack/node_modules/babel-preset-react-app/dependencies.js",
                     ],
                   },
                 },
@@ -415,18 +409,18 @@ Object {
               "test": /\\\\\\.svg\\$/,
               "use": Array [
                 Object {
-                  "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/babel-loader/lib/index.js",
+                  "loader": "/Users/kyle/dev/libraries/quantumpack/node_modules/babel-loader/lib/index.js",
                   "options": Object {
                     "babelrc": false,
                     "cacheDirectory": true,
                     "presets": Array [
-                      "/Users/kyle/dev/libraries/sappira-webpack/node_modules/babel-preset-react-app/index.js",
+                      "/Users/kyle/dev/libraries/quantumpack/node_modules/babel-preset-react-app/index.js",
                     ],
                   },
                 },
-                "/Users/kyle/dev/libraries/sappira-webpack/node_modules/svgr/webpack.js",
+                "/Users/kyle/dev/libraries/quantumpack/node_modules/svgr/webpack.js",
                 Object {
-                  "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/file-loader/dist/cjs.js",
+                  "loader": "/Users/kyle/dev/libraries/quantumpack/node_modules/file-loader/dist/cjs.js",
                   "options": Object {
                     "name": "static/media/[name].[hash:8].[ext]",
                   },
@@ -437,16 +431,16 @@ Object {
               "exclude": /\\\\\\.module\\\\\\.css\\$/,
               "test": /\\\\\\.css\\$/,
               "use": Array [
-                "/Users/kyle/dev/libraries/sappira-webpack/node_modules/mini-css-extract-plugin/dist/loader.js",
+                "/Users/kyle/dev/libraries/quantumpack/node_modules/mini-css-extract-plugin/dist/loader.js",
                 Object {
-                  "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/css-loader/index.js",
+                  "loader": "/Users/kyle/dev/libraries/quantumpack/node_modules/css-loader/index.js",
                   "options": Object {
                     "importLoaders": 1,
                     "sourceMap": undefined,
                   },
                 },
                 Object {
-                  "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/postcss-loader/lib/index.js",
+                  "loader": "/Users/kyle/dev/libraries/quantumpack/node_modules/postcss-loader/lib/index.js",
                   "options": Object {
                     "ident": "postcss",
                     "plugins": [Function],
@@ -458,9 +452,9 @@ Object {
             Object {
               "test": /\\\\\\.module\\\\\\.css\\$/,
               "use": Array [
-                "/Users/kyle/dev/libraries/sappira-webpack/node_modules/mini-css-extract-plugin/dist/loader.js",
+                "/Users/kyle/dev/libraries/quantumpack/node_modules/mini-css-extract-plugin/dist/loader.js",
                 Object {
-                  "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/css-loader/index.js",
+                  "loader": "/Users/kyle/dev/libraries/quantumpack/node_modules/css-loader/index.js",
                   "options": Object {
                     "getLocalIdent": [Function],
                     "importLoaders": 1,
@@ -469,7 +463,7 @@ Object {
                   },
                 },
                 Object {
-                  "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/postcss-loader/lib/index.js",
+                  "loader": "/Users/kyle/dev/libraries/quantumpack/node_modules/postcss-loader/lib/index.js",
                   "options": Object {
                     "ident": "postcss",
                     "plugins": [Function],
@@ -482,16 +476,16 @@ Object {
               "exclude": /\\\\\\.module\\\\\\.\\(scss\\|sass\\)\\$/,
               "test": /\\\\\\.\\(scss\\|sass\\)\\$/,
               "use": Array [
-                "/Users/kyle/dev/libraries/sappira-webpack/node_modules/mini-css-extract-plugin/dist/loader.js",
+                "/Users/kyle/dev/libraries/quantumpack/node_modules/mini-css-extract-plugin/dist/loader.js",
                 Object {
-                  "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/css-loader/index.js",
+                  "loader": "/Users/kyle/dev/libraries/quantumpack/node_modules/css-loader/index.js",
                   "options": Object {
                     "importLoaders": 2,
                     "sourceMap": undefined,
                   },
                 },
                 Object {
-                  "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/postcss-loader/lib/index.js",
+                  "loader": "/Users/kyle/dev/libraries/quantumpack/node_modules/postcss-loader/lib/index.js",
                   "options": Object {
                     "ident": "postcss",
                     "plugins": [Function],
@@ -499,7 +493,7 @@ Object {
                   },
                 },
                 Object {
-                  "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/sass-loader/lib/loader.js",
+                  "loader": "/Users/kyle/dev/libraries/quantumpack/node_modules/sass-loader/lib/loader.js",
                   "options": Object {
                     "sourceMap": undefined,
                   },
@@ -509,9 +503,9 @@ Object {
             Object {
               "test": /\\\\\\.module\\\\\\.\\(scss\\|sass\\)\\$/,
               "use": Array [
-                "/Users/kyle/dev/libraries/sappira-webpack/node_modules/mini-css-extract-plugin/dist/loader.js",
+                "/Users/kyle/dev/libraries/quantumpack/node_modules/mini-css-extract-plugin/dist/loader.js",
                 Object {
-                  "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/css-loader/index.js",
+                  "loader": "/Users/kyle/dev/libraries/quantumpack/node_modules/css-loader/index.js",
                   "options": Object {
                     "getLocalIdent": [Function],
                     "importLoaders": 2,
@@ -520,7 +514,7 @@ Object {
                   },
                 },
                 Object {
-                  "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/postcss-loader/lib/index.js",
+                  "loader": "/Users/kyle/dev/libraries/quantumpack/node_modules/postcss-loader/lib/index.js",
                   "options": Object {
                     "ident": "postcss",
                     "plugins": [Function],
@@ -528,7 +522,7 @@ Object {
                   },
                 },
                 Object {
-                  "loader": "/Users/kyle/dev/libraries/sappira-webpack/node_modules/sass-loader/lib/loader.js",
+                  "loader": "/Users/kyle/dev/libraries/quantumpack/node_modules/sass-loader/lib/loader.js",
                   "options": Object {
                     "sourceMap": undefined,
                   },
@@ -613,7 +607,7 @@ Object {
       "chunkFilename": "static/js/[name].[chunkhash:8].chunk.js",
       "devtoolModuleFilenameTemplate": [Function],
       "filename": "static/js/[name].[chunkhash:8].js",
-      "path": "/Users/kyle/dev/libraries/sappira-webpack/build",
+      "path": "/Users/kyle/dev/libraries/quantumpack/build",
       "publicPath": "/",
     },
     "plugins": Array [
@@ -642,7 +636,7 @@ Object {
             "useShortDoctype": true,
           },
           "showErrors": true,
-          "template": "/Users/kyle/dev/libraries/sappira-webpack/public/index.html",
+          "template": "/Users/kyle/dev/libraries/quantumpack/public/index.html",
           "templateParameters": [Function],
           "title": "Webpack App",
           "xhtml": false,
@@ -693,21 +687,21 @@ Object {
     "PUBLIC_URL": "",
   },
   "paths": Object {
-    "appBuild": "/Users/kyle/dev/libraries/sappira-webpack/build",
-    "appHtml": "/Users/kyle/dev/libraries/sappira-webpack/public/index.html",
-    "appIndexJs": "/Users/kyle/dev/libraries/sappira-webpack/src/index.js",
-    "appNodeModules": "/Users/kyle/dev/libraries/sappira-webpack/node_modules",
-    "appPackageJson": "/Users/kyle/dev/libraries/sappira-webpack/package.json",
-    "appPath": "/Users/kyle/dev/libraries/sappira-webpack",
-    "appPublic": "/Users/kyle/dev/libraries/sappira-webpack/public",
-    "appSrc": "/Users/kyle/dev/libraries/sappira-webpack/src",
-    "dotenv": "/Users/kyle/dev/libraries/sappira-webpack/.env",
+    "appBuild": "/Users/kyle/dev/libraries/quantumpack/build",
+    "appHtml": "/Users/kyle/dev/libraries/quantumpack/public/index.html",
+    "appIndexJs": "/Users/kyle/dev/libraries/quantumpack/src/index.js",
+    "appNodeModules": "/Users/kyle/dev/libraries/quantumpack/node_modules",
+    "appPackageJson": "/Users/kyle/dev/libraries/quantumpack/package.json",
+    "appPath": "/Users/kyle/dev/libraries/quantumpack",
+    "appPublic": "/Users/kyle/dev/libraries/quantumpack/public",
+    "appSrc": "/Users/kyle/dev/libraries/quantumpack/src",
+    "dotenv": "/Users/kyle/dev/libraries/quantumpack/.env",
     "publicUrl": undefined,
     "servedPath": "/",
     "srcPaths": Array [
-      "/Users/kyle/dev/libraries/sappira-webpack/src",
+      "/Users/kyle/dev/libraries/quantumpack/src",
     ],
-    "testsSetup": "/Users/kyle/dev/libraries/sappira-webpack/src/setupTests.js",
+    "testsSetup": "/Users/kyle/dev/libraries/quantumpack/src/setupTests.js",
     "useYarn": true,
   },
 }

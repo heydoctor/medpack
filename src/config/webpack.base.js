@@ -104,7 +104,7 @@ module.exports = ({ mode, paths, env, sourceMaps }) => {
             // The preset includes JSX, Flow, and some ESnext features.
             {
               test: /\.(js|jsx|mjs)$/,
-              include: paths.srcPaths,
+              // include: paths.srcPaths,
               exclude: [/[/\\\\]node_modules[/\\\\]/],
               use: [
                 // This loader parallelizes code compilation, it is optional but

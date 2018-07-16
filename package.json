@@ -1,6 +1,6 @@
 {
   "name": "quantumpack",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Extensible, opinionated webpack configuration",
   "engines": {
     "node": ">= 8.0.0",
@@ -11,6 +11,7 @@
   "files": [
     "lib"
   ],
+  "license": "MIT",
   "scripts": {
     "test": "jest",
     "build": "babel src -d lib",

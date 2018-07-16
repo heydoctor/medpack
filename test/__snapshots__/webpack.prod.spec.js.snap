@@ -4,7 +4,7 @@ exports[`webpack.prod 1`] = `
 Object {
   "devtool": false,
   "entry": Array [
-    "/Users/kyle/dev/libraries/sappira-webpack/src/config/polyfills.js",
+    "/Users/kyle/dev/libraries/quantumpack/src/config/polyfills.js",
     undefined,
   ],
   "mode": "production",
