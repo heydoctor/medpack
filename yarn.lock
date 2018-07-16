@@ -599,6 +599,12 @@
   dependencies:
     "@babel/helper-plugin-utils" "7.0.0-beta.46"
 
+"@babel/plugin-syntax-flow@7.0.0-beta.53":
+  version "7.0.0-beta.53"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-flow/-/plugin-syntax-flow-7.0.0-beta.53.tgz#6e4ee8bd57b20e95425ffed995884967d56e28aa"
+  dependencies:
+    "@babel/helper-plugin-utils" "7.0.0-beta.53"
+
 "@babel/plugin-syntax-jsx@7.0.0-beta.46":
   version "7.0.0-beta.46"
   resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-jsx/-/plugin-syntax-jsx-7.0.0-beta.46.tgz#ed2e8a43716e7904ae33dca71d5f2b436f0f25e8"
@@ -787,6 +793,13 @@
   dependencies:
     "@babel/helper-plugin-utils" "7.0.0-beta.46"
     "@babel/plugin-syntax-flow" "7.0.0-beta.46"
+
+"@babel/plugin-transform-flow-strip-types@7.0.0-beta.53":
+  version "7.0.0-beta.53"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-flow-strip-types/-/plugin-transform-flow-strip-types-7.0.0-beta.53.tgz#d67fa5b4f78cfc1f9a44556b0623a22fb2e7bc63"
+  dependencies:
+    "@babel/helper-plugin-utils" "7.0.0-beta.53"
+    "@babel/plugin-syntax-flow" "7.0.0-beta.53"
 
 "@babel/plugin-transform-for-of@7.0.0-beta.46":
   version "7.0.0-beta.46"
@@ -1190,6 +1203,13 @@
   dependencies:
     "@babel/helper-plugin-utils" "7.0.0-beta.46"
     "@babel/plugin-transform-flow-strip-types" "7.0.0-beta.46"
+
+"@babel/preset-flow@^7.0.0-beta.53":
+  version "7.0.0-beta.53"
+  resolved "https://registry.yarnpkg.com/@babel/preset-flow/-/preset-flow-7.0.0-beta.53.tgz#6a2961dee4a12bd6f5cb61161b453df7b217441e"
+  dependencies:
+    "@babel/helper-plugin-utils" "7.0.0-beta.53"
+    "@babel/plugin-transform-flow-strip-types" "7.0.0-beta.53"
 
 "@babel/preset-react@7.0.0-beta.46":
   version "7.0.0-beta.46"

@@ -108,18 +108,19 @@ module.exports = ({ mode, paths, env, sourceMaps }) => {
               use: [
                 // This loader parallelizes code compilation, it is optional but
                 // improves compile time on larger projects
-                {
-                  loader: require.resolve('thread-loader'),
-                  options: {
-                    poolTimeout: Infinity, // keep workers alive for more effective watch mode
-                  },
-                },
+                // {
+                //   loader: require.resolve('thread-loader'),
+                //   options: {
+                //     poolTimeout: Infinity, // keep workers alive for more effective watch mode
+                //   },
+                // },
                 {
                   loader: require.resolve('babel-loader'),
                   options: {
                     presets: [
                       [require.resolve('@babel/preset-env'), { useBuiltIns: 'entry', modules: false }],
                       [require.resolve('@babel/preset-react'), { development: mode === 'development', useBuiltIns: true }],
+                      require.resolve('@babel/preset-flow')
                     ],
                     plugins: [
                       require.resolve('@babel/plugin-transform-destructuring'),
