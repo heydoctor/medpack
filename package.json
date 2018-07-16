@@ -1,6 +1,6 @@
 {
   "name": "quantumpack",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Extensible, opinionated webpack configuration",
   "engines": {
     "node": ">= 8.0.0",
@@ -16,7 +16,7 @@
     "test": "jest",
     "build": "babel src -d lib",
     "prepublishOnly": "npm run build",
-    "publish": "standard-version",
+    "version": "standard-version",
     "release": "npm run publish && git push --follow-tags"
   },
   "author": "Kyle Alwyn <kyle@sappira.com>",
