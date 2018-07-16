@@ -7,6 +7,11 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
+<a name="0.0.4"></a>
+## [0.0.4](/compare/v0.0.3...v0.0.4) (2018-07-16)
+
+
+
 <a name="0.0.3"></a>
 ## [0.0.3](/compare/v0.0.1...v0.0.3) (2018-07-16)
 
