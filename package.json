@@ -1,6 +1,6 @@
 {
   "name": "quantumpack",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Extensible, opinionated webpack configuration",
   "engines": {
     "node": ">= 8.0.0",
@@ -21,9 +21,9 @@
   },
   "author": "Kyle Alwyn <kyle@sappira.com>",
   "dependencies": {
-    "@babel/cli": "7.0.0-beta.46",
-    "@babel/core": "7.0.0-beta.46",
-    "@babel/runtime": "7.0.0-beta.46",
+    "@babel/cli": "7.0.0-beta.53",
+    "@babel/core": "7.0.0-beta.53",
+    "@babel/runtime": "7.0.0-beta.53",
     "autoprefixer": "8.5.0",
     "babel-core": "^7.0.0-0",
     "babel-eslint": "8.2.3",
@@ -70,8 +70,8 @@
     "react-dom": "16.4.1"
   },
   "devDependencies": {
-    "@babel/preset-env": "7.0.0-beta.46",
-    "@babel/preset-react": "7.0.0-beta.46",
+    "@babel/preset-env": "7.0.0-beta.53",
+    "@babel/preset-react": "7.0.0-beta.53",
     "eslint-config-sappira": "1.4.0",
     "react": "16.4.1",
     "react-dom": "16.4.1",
