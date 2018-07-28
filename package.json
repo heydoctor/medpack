@@ -1,6 +1,6 @@
 {
   "name": "quantumpack",
-  "version": "0.0.29",
+  "version": "0.0.30",
   "description": "Extensible, opinionated webpack configuration",
   "repository": "sappira-inc/quantumpack",
   "engines": {
@@ -16,9 +16,8 @@
   "scripts": {
     "test": "jest",
     "build": "babel src -d lib",
-    "prepublishOnly": "echo hi",
-    "version": "standard-version",
-    "release": "npm run publish && git push --follow-tags"
+    "prepublishOnly": "npm run build",
+    "release": "standard-version"
   },
   "author": "Kyle Alwyn <kyle@sappira.com>",
   "dependencies": {
