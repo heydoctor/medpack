@@ -15,7 +15,7 @@ const sassModuleRegex = /\.module\.(scss|sass)$/;
 
 const stringifyEnv = raw => ({
   'process.env': Object.keys(raw).reduce((env, key) => {
-    env[key] = JSON.stringify(env[key]);
+    env[key] = JSON.stringify(raw[key]);
     return env;
   }, {}),
 });
@@ -23,6 +23,7 @@ const stringifyEnv = raw => ({
 // Default Webpack configuration
 // @see: https://webpack.js.org/configuration/
 module.exports = ({ mode, paths, env, sourceMaps }) => {
+
   // Common function to get style loaders
   const enableSourceMaps = mode === 'production' && sourceMaps;
 
@@ -70,28 +71,6 @@ module.exports = ({ mode, paths, env, sourceMaps }) => {
       devtoolModuleFilenameTemplate: info => path.relative(paths.appSrc, info.absoluteResourcePath).replace(/\\/g, '/'),
     },
     optimization: {
-      splitChunks: {
-        cacheGroups: {
-          default: false,
-          vendors: false,
-          // vendor chunk
-          vendor: {
-            name: 'vendor',
-            chunks: 'all',
-            test: /node_modules/,
-            priority: 20
-          },
-          // common chunk
-          common: {
-            name: 'common',
-            minChunks: 2,
-            chunks: 'async',
-            priority: 10,
-            reuseExistingChunk: true,
-            enforce: true
-          }
-        }
-      },
       // Keep the runtime chunk seperated to enable long term caching
       // https://twitter.com/wSokra/status/969679223278505985
       runtimeChunk: {

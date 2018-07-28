@@ -10,7 +10,7 @@ module.exports = ({
   mode = process.env.NODE_ENV,
   devPublicUrl = '/',
   prodPublicUrl = '',
-  sourceMaps,
+  sourceMaps = true,
   paths = {},
   env: customEnv = {},
   webpack: customWebpack = a => a,
@@ -28,6 +28,7 @@ module.exports = ({
 
   const baseConfig = webpackBase(options);
   const envConfig = isProd ? webpackProd(options) : webpackDev(options);
+
   const config = customWebpack(webpackMerge(baseConfig, envConfig));
 
   return {

@@ -5,7 +5,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 module.exports = ({ paths, sourceMaps }) => {
   // Webpack uses `publicPath` to determine where the app is being served from.
   // It requires a trailing slash, or the file assets will get an incorrect path.
-  const publicPath = paths.servedPath;
+  const publicPath = paths.servedPath || '/';
 
   return {
     mode: 'production',
@@ -23,6 +23,10 @@ module.exports = ({ paths, sourceMaps }) => {
     },
     devtool: sourceMaps ? 'source-map' : false,
     optimization: {
+      splitChunks: {
+        chunks: 'all',
+        name: 'vendors',
+      },
       minimizer: [
         new UglifyJsPlugin({
           uglifyOptions: {

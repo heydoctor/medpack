@@ -2,6 +2,7 @@
   "name": "quantumpack",
   "version": "0.0.29",
   "description": "Extensible, opinionated webpack configuration",
+  "repository": "sappira-inc/quantumpack",
   "engines": {
     "node": ">= 8.0.0",
     "npm": ">= 5.0.0"
