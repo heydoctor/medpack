@@ -11,7 +11,7 @@ export default ({ paths, sourceMaps }: IWebpackConfig): Configuration => {
 
   return {
     mode: 'production',
-    entry: [require.resolve('./polyfills'), paths.appIndexJs],
+    entry: [`${__dirname}/polyfills`, paths.appIndexJs],
     output: {
       // The build folder.
       path: paths.appBuild,

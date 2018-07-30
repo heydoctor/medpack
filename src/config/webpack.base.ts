@@ -31,14 +31,14 @@ export default ({ mode, paths, env, sourceMaps }: IWebpackConfig): Configuration
   const getStyleLoaders = (cssOptions: Object, preProcessor: string = ''): Array<Loader> => {
     const loaders = [
       {
-        loader: require.resolve('css-loader'),
+        loader: 'css-loader',
         options: cssOptions,
       },
       {
         // Options for PostCSS as we reference these options twice
         // Adds vendor prefixing based on your specified browser support in
         // package.json
-        loader: require.resolve('postcss-loader'),
+        loader: 'postcss-loader',
         options: {
           // Necessary for external CSS imports to work
           // https://github.com/facebook/create-react-app/issues/2677
@@ -59,12 +59,12 @@ export default ({ mode, paths, env, sourceMaps }: IWebpackConfig): Configuration
       loaders.unshift(MiniCssExtractPlugin.loader);
     } else {
       // @ts-ignore
-      loaders.unshift(require.resolve('style-loader'));
+      loaders.unshift('style-loader');
     }
 
     if (preProcessor) {
       loaders.push({
-        loader: require.resolve(preProcessor),
+        loader: preProcessor,
         options: {
           sourceMap: enableSourceMaps,
         },
@@ -117,7 +117,7 @@ export default ({ mode, paths, env, sourceMaps }: IWebpackConfig): Configuration
             // A missing `test` is equivalent to a match.
             {
               test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
-              loader: require.resolve('url-loader'),
+              loader: 'url-loader',
               options: {
                 limit: 10000,
                 name: 'static/media/[name].[hash:8].[ext]',
@@ -133,34 +133,35 @@ export default ({ mode, paths, env, sourceMaps }: IWebpackConfig): Configuration
                 // This loader parallelizes code compilation, it is optional but
                 // improves compile time on larger projects
                 {
-                  loader: require.resolve('thread-loader'),
+                  loader: 'thread-loader',
                   options: {
                     poolTimeout: Infinity, // keep workers alive for more effective watch mode
                   },
                 },
                 {
-                  loader: require.resolve('babel-loader'),
+                  loader: 'babel-loader',
                   options: {
                     presets: [
-                      [require.resolve('@babel/preset-env'), { useBuiltIns: 'entry', modules: false }],
-                      [require.resolve('@babel/preset-react'), { development: mode === 'development', useBuiltIns: true }],
-                      require.resolve('@babel/preset-flow')
+                      ['@babel/preset-env', { useBuiltIns: 'entry', modules: false }],
+                      ['@babel/preset-react', { development: mode === 'development', useBuiltIns: true }],
+                      '@babel/preset-flow'
                     ],
                     plugins: [
-                      require.resolve('@babel/plugin-transform-destructuring'),
-                      [require.resolve('@babel/plugin-proposal-class-properties'), { loose: true }],
-                      [require.resolve('@babel/plugin-proposal-object-rest-spread'), { useBuiltIns: true }],
+                      ['@babel/plugin-proposal-decorators', { legacy: true }],
+                      '@babel/plugin-transform-destructuring',
+                      ['@babel/plugin-proposal-class-properties', { loose: true }],
+                      ['@babel/plugin-proposal-object-rest-spread', { useBuiltIns: true }],
                       [
-                        require.resolve('@babel/plugin-transform-runtime'),
+                        '@babel/plugin-transform-runtime',
                         {
                           helpers: false,
                           polyfill: false,
                           regenerator: true,
                         },
                       ],
-                      require.resolve('@babel/plugin-syntax-dynamic-import'),
-                      require.resolve('@babel/plugin-proposal-export-default-from'),
-                      require.resolve('babel-plugin-lodash')
+                      '@babel/plugin-syntax-dynamic-import',
+                      '@babel/plugin-proposal-export-default-from',
+                      'babel-plugin-lodash'
                     ],
                     // This is a feature of `babel-loader` for webpack (not Babel itself).
                     // It enables caching results in ./node_modules/.cache/babel-loader/
@@ -228,7 +229,7 @@ export default ({ mode, paths, env, sourceMaps }: IWebpackConfig): Configuration
               // Also exclude `html` and `json` extensions so they get processed
               // by webpacks internal loaders.
               exclude: [/\.(js|jsx|mjs)$/, /\.html$/, /\.json$/],
-              loader: require.resolve('file-loader'),
+              loader: 'file-loader',
               options: {
                 name: 'static/media/[name].[hash:8].[ext]',
               },

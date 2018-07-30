@@ -1,12 +1,13 @@
 import webpack, { Configuration } from 'webpack';
 import CaseSensitivePathsPlugin from 'case-sensitive-paths-webpack-plugin';
-// import WatchMissingNodeModulesPlugin from 'react-dev-utils/WatchMissingNodeModulesPlugin';
+// @ts-ignore
+import WatchMissingNodeModulesPlugin from 'react-dev-utils/WatchMissingNodeModulesPlugin';
 import { IWebpackConfig } from './types';
 
 export default ({ paths }: IWebpackConfig): Configuration => ({
   mode: 'development',
   devtool: 'cheap-module-source-map',
-  entry: [require.resolve('./polyfills'), require.resolve('react-dev-utils/webpackHotDevClient'), paths.appIndexJs],
+  entry: [`${__dirname}/polyfills`, 'react-dev-utils/webpackHotDevClient', paths.appIndexJs],
   output: {
     pathinfo: true,
     filename: 'static/js/bundle.js',
@@ -26,6 +27,6 @@ export default ({ paths }: IWebpackConfig): Configuration => ({
     // to restart the development server for Webpack to discover it. This plugin
     // makes the discovery automatic so you don't have to restart.
     // See https://github.com/facebook/create-react-app/issues/186
-    // new WatchMissingNodeModulesPlugin(paths.appNodeModules),
+    new WatchMissingNodeModulesPlugin(paths.appNodeModules),
   ],
 });
