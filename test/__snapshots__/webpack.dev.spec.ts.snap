@@ -4,8 +4,8 @@ exports[`webpack.dev 1`] = `
 Object {
   "devtool": "cheap-module-source-map",
   "entry": Array [
-    "/Users/kyle/dev/libraries/medpack/src/config/polyfills.js",
-    "/Users/kyle/dev/libraries/medpack/node_modules/react-dev-utils/webpackHotDevClient.js",
+    "/Users/kyle/dev/libraries/medpack/src/config/polyfills",
+    "react-dev-utils/webpackHotDevClient",
     undefined,
   ],
   "mode": "development",
@@ -27,6 +27,9 @@ Object {
       "options": Object {},
       "pathCache": Object {},
       "primed": false,
+    },
+    WatchMissingNodeModulesPlugin {
+      "nodeModulesPath": undefined,
     },
   ],
 }

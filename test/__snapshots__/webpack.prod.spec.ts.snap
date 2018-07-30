@@ -4,7 +4,7 @@ exports[`webpack.prod 1`] = `
 Object {
   "devtool": false,
   "entry": Array [
-    "/Users/kyle/dev/libraries/medpack/src/config/polyfills.js",
+    "/Users/kyle/dev/libraries/medpack/src/config/polyfills",
     undefined,
   ],
   "mode": "production",
@@ -71,10 +71,6 @@ Object {
         },
       },
     ],
-    "splitChunks": Object {
-      "chunks": "all",
-      "name": "vendors",
-    },
   },
   "output": Object {
     "chunkFilename": "static/js/[name].[chunkhash:8].chunk.js",

@@ -5,8 +5,8 @@ Object {
   "config": Object {
     "devtool": "cheap-module-source-map",
     "entry": Array [
-      "/Users/kyle/dev/libraries/medpack/src/config/polyfills.js",
-      "/Users/kyle/dev/libraries/medpack/node_modules/react-dev-utils/webpackHotDevClient.js",
+      "/Users/kyle/dev/libraries/medpack/src/config/polyfills",
+      "react-dev-utils/webpackHotDevClient",
       "/Users/kyle/dev/libraries/medpack/src/index.js",
     ],
     "mode": "development",
@@ -20,7 +20,7 @@ Object {
         Object {
           "oneOf": Array [
             Object {
-              "loader": "/Users/kyle/dev/libraries/medpack/node_modules/url-loader/dist/cjs.js",
+              "loader": "url-loader",
               "options": Object {
                 "limit": 10000,
                 "name": "static/media/[name].[hash:8].[ext]",
@@ -37,52 +37,64 @@ Object {
               "test": /\\(js\\|jsx\\)\\$/,
               "use": Array [
                 Object {
-                  "loader": "/Users/kyle/dev/libraries/medpack/node_modules/babel-loader/lib/index.js",
+                  "loader": "thread-loader",
+                  "options": Object {
+                    "poolTimeout": Infinity,
+                  },
+                },
+                Object {
+                  "loader": "babel-loader",
                   "options": Object {
                     "cacheDirectory": false,
                     "highlightCode": true,
                     "plugins": Array [
-                      "/Users/kyle/dev/libraries/medpack/node_modules/@babel/plugin-transform-destructuring/lib/index.js",
                       Array [
-                        "/Users/kyle/dev/libraries/medpack/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+                        "@babel/plugin-proposal-decorators",
+                        Object {
+                          "legacy": true,
+                        },
+                      ],
+                      "@babel/plugin-transform-destructuring",
+                      Array [
+                        "@babel/plugin-proposal-class-properties",
                         Object {
                           "loose": true,
                         },
                       ],
                       Array [
-                        "/Users/kyle/dev/libraries/medpack/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
+                        "@babel/plugin-proposal-object-rest-spread",
                         Object {
                           "useBuiltIns": true,
                         },
                       ],
                       Array [
-                        "/Users/kyle/dev/libraries/medpack/node_modules/@babel/plugin-transform-runtime/lib/index.js",
+                        "@babel/plugin-transform-runtime",
                         Object {
                           "helpers": false,
                           "polyfill": false,
                           "regenerator": true,
                         },
                       ],
-                      "/Users/kyle/dev/libraries/medpack/node_modules/@babel/plugin-syntax-dynamic-import/lib/index.js",
-                      "/Users/kyle/dev/libraries/medpack/node_modules/@babel/plugin-proposal-export-default-from/lib/index.js",
-                      "/Users/kyle/dev/libraries/medpack/node_modules/babel-plugin-lodash/lib/index.js",
+                      "@babel/plugin-syntax-dynamic-import",
+                      "@babel/plugin-proposal-export-default-from",
+                      "babel-plugin-lodash",
                     ],
                     "presets": Array [
                       Array [
-                        "/Users/kyle/dev/libraries/medpack/node_modules/@babel/preset-env/lib/index.js",
+                        "@babel/preset-env",
                         Object {
                           "modules": false,
                           "useBuiltIns": "entry",
                         },
                       ],
                       Array [
-                        "/Users/kyle/dev/libraries/medpack/node_modules/@babel/preset-react/lib/index.js",
+                        "@babel/preset-react",
                         Object {
                           "development": false,
                           "useBuiltIns": true,
                         },
                       ],
-                      "/Users/kyle/dev/libraries/medpack/node_modules/@babel/preset-flow/lib/index.js",
+                      "@babel/preset-flow",
                     ],
                   },
                 },
@@ -92,16 +104,16 @@ Object {
               "exclude": /\\\\\\.module\\\\\\.css\\$/,
               "test": /\\\\\\.css\\$/,
               "use": Array [
-                "/Users/kyle/dev/libraries/medpack/node_modules/style-loader/index.js",
+                "style-loader",
                 Object {
-                  "loader": "/Users/kyle/dev/libraries/medpack/node_modules/css-loader/index.js",
+                  "loader": "css-loader",
                   "options": Object {
                     "importLoaders": 1,
                     "sourceMap": false,
                   },
                 },
                 Object {
-                  "loader": "/Users/kyle/dev/libraries/medpack/node_modules/postcss-loader/lib/index.js",
+                  "loader": "postcss-loader",
                   "options": Object {
                     "ident": "postcss",
                     "plugins": [Function],
@@ -113,9 +125,9 @@ Object {
             Object {
               "test": /\\\\\\.module\\\\\\.css\\$/,
               "use": Array [
-                "/Users/kyle/dev/libraries/medpack/node_modules/style-loader/index.js",
+                "style-loader",
                 Object {
-                  "loader": "/Users/kyle/dev/libraries/medpack/node_modules/css-loader/index.js",
+                  "loader": "css-loader",
                   "options": Object {
                     "camelCase": true,
                     "importLoaders": 1,
@@ -125,7 +137,7 @@ Object {
                   },
                 },
                 Object {
-                  "loader": "/Users/kyle/dev/libraries/medpack/node_modules/postcss-loader/lib/index.js",
+                  "loader": "postcss-loader",
                   "options": Object {
                     "ident": "postcss",
                     "plugins": [Function],
@@ -138,16 +150,16 @@ Object {
               "exclude": /\\\\\\.module\\\\\\.\\(scss\\|sass\\)\\$/,
               "test": /\\\\\\.\\(scss\\|sass\\)\\$/,
               "use": Array [
-                "/Users/kyle/dev/libraries/medpack/node_modules/style-loader/index.js",
+                "style-loader",
                 Object {
-                  "loader": "/Users/kyle/dev/libraries/medpack/node_modules/css-loader/index.js",
+                  "loader": "css-loader",
                   "options": Object {
                     "importLoaders": 2,
                     "sourceMap": false,
                   },
                 },
                 Object {
-                  "loader": "/Users/kyle/dev/libraries/medpack/node_modules/postcss-loader/lib/index.js",
+                  "loader": "postcss-loader",
                   "options": Object {
                     "ident": "postcss",
                     "plugins": [Function],
@@ -155,7 +167,7 @@ Object {
                   },
                 },
                 Object {
-                  "loader": "/Users/kyle/dev/libraries/medpack/node_modules/sass-loader/lib/loader.js",
+                  "loader": "sass-loader",
                   "options": Object {
                     "sourceMap": false,
                   },
@@ -165,9 +177,9 @@ Object {
             Object {
               "test": /\\\\\\.module\\\\\\.\\(scss\\|sass\\)\\$/,
               "use": Array [
-                "/Users/kyle/dev/libraries/medpack/node_modules/style-loader/index.js",
+                "style-loader",
                 Object {
-                  "loader": "/Users/kyle/dev/libraries/medpack/node_modules/css-loader/index.js",
+                  "loader": "css-loader",
                   "options": Object {
                     "camelCase": true,
                     "importLoaders": 2,
@@ -177,7 +189,7 @@ Object {
                   },
                 },
                 Object {
-                  "loader": "/Users/kyle/dev/libraries/medpack/node_modules/postcss-loader/lib/index.js",
+                  "loader": "postcss-loader",
                   "options": Object {
                     "ident": "postcss",
                     "plugins": [Function],
@@ -185,7 +197,7 @@ Object {
                   },
                 },
                 Object {
-                  "loader": "/Users/kyle/dev/libraries/medpack/node_modules/sass-loader/lib/loader.js",
+                  "loader": "sass-loader",
                   "options": Object {
                     "sourceMap": false,
                   },
@@ -198,7 +210,7 @@ Object {
                 /\\\\\\.html\\$/,
                 /\\\\\\.json\\$/,
               ],
-              "loader": "/Users/kyle/dev/libraries/medpack/node_modules/file-loader/dist/cjs.js",
+              "loader": "file-loader",
               "options": Object {
                 "name": "static/media/[name].[hash:8].[ext]",
               },
@@ -210,6 +222,23 @@ Object {
     "optimization": Object {
       "runtimeChunk": Object {
         "name": "manifest",
+      },
+      "splitChunks": Object {
+        "cacheGroups": Object {
+          "async-vendors": Object {
+            "chunks": "async",
+            "minChunks": 2,
+            "name": "async-vendors",
+            "priority": 0,
+            "test": /node_modules/,
+          },
+          "vendors": Object {
+            "chunks": "initial",
+            "name": "vendors",
+            "priority": -10,
+            "test": /node_modules/,
+          },
+        },
       },
     },
     "output": Object {
@@ -254,14 +283,14 @@ Object {
       InterpolateHtmlPlugin {
         "replacements": Object {
           "NODE_ENV": "test",
-          "PUBLIC_URL": undefined,
+          "PUBLIC_URL": "",
         },
       },
       DefinePlugin {
         "definitions": Object {
           "process.env": Object {
             "NODE_ENV": "\\"test\\"",
-            "PUBLIC_URL": undefined,
+            "PUBLIC_URL": "\\"\\"",
           },
         },
       },
@@ -297,11 +326,14 @@ Object {
         "pathCache": Object {},
         "primed": false,
       },
+      WatchMissingNodeModulesPlugin {
+        "nodeModulesPath": "/Users/kyle/dev/libraries/medpack/node_modules",
+      },
     ],
   },
   "env": Object {
     "NODE_ENV": "test",
-    "PUBLIC_URL": undefined,
+    "PUBLIC_URL": "",
   },
   "paths": Object {
     "appBuild": "/Users/kyle/dev/libraries/medpack/build",
@@ -319,7 +351,6 @@ Object {
       "/Users/kyle/dev/libraries/medpack/src",
     ],
     "testsSetup": "/Users/kyle/dev/libraries/medpack/src/setupTests.js",
-    "useYarn": true,
   },
 }
 `;
@@ -329,7 +360,7 @@ Object {
   "config": Object {
     "devtool": "source-map",
     "entry": Array [
-      "/Users/kyle/dev/libraries/medpack/src/config/polyfills.js",
+      "/Users/kyle/dev/libraries/medpack/src/config/polyfills",
       "/Users/kyle/dev/libraries/medpack/src/index.js",
     ],
     "mode": "production",
@@ -343,7 +374,7 @@ Object {
         Object {
           "oneOf": Array [
             Object {
-              "loader": "/Users/kyle/dev/libraries/medpack/node_modules/url-loader/dist/cjs.js",
+              "loader": "url-loader",
               "options": Object {
                 "limit": 10000,
                 "name": "static/media/[name].[hash:8].[ext]",
@@ -360,52 +391,64 @@ Object {
               "test": /\\(js\\|jsx\\)\\$/,
               "use": Array [
                 Object {
-                  "loader": "/Users/kyle/dev/libraries/medpack/node_modules/babel-loader/lib/index.js",
+                  "loader": "thread-loader",
+                  "options": Object {
+                    "poolTimeout": Infinity,
+                  },
+                },
+                Object {
+                  "loader": "babel-loader",
                   "options": Object {
                     "cacheDirectory": false,
                     "highlightCode": true,
                     "plugins": Array [
-                      "/Users/kyle/dev/libraries/medpack/node_modules/@babel/plugin-transform-destructuring/lib/index.js",
                       Array [
-                        "/Users/kyle/dev/libraries/medpack/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+                        "@babel/plugin-proposal-decorators",
+                        Object {
+                          "legacy": true,
+                        },
+                      ],
+                      "@babel/plugin-transform-destructuring",
+                      Array [
+                        "@babel/plugin-proposal-class-properties",
                         Object {
                           "loose": true,
                         },
                       ],
                       Array [
-                        "/Users/kyle/dev/libraries/medpack/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
+                        "@babel/plugin-proposal-object-rest-spread",
                         Object {
                           "useBuiltIns": true,
                         },
                       ],
                       Array [
-                        "/Users/kyle/dev/libraries/medpack/node_modules/@babel/plugin-transform-runtime/lib/index.js",
+                        "@babel/plugin-transform-runtime",
                         Object {
                           "helpers": false,
                           "polyfill": false,
                           "regenerator": true,
                         },
                       ],
-                      "/Users/kyle/dev/libraries/medpack/node_modules/@babel/plugin-syntax-dynamic-import/lib/index.js",
-                      "/Users/kyle/dev/libraries/medpack/node_modules/@babel/plugin-proposal-export-default-from/lib/index.js",
-                      "/Users/kyle/dev/libraries/medpack/node_modules/babel-plugin-lodash/lib/index.js",
+                      "@babel/plugin-syntax-dynamic-import",
+                      "@babel/plugin-proposal-export-default-from",
+                      "babel-plugin-lodash",
                     ],
                     "presets": Array [
                       Array [
-                        "/Users/kyle/dev/libraries/medpack/node_modules/@babel/preset-env/lib/index.js",
+                        "@babel/preset-env",
                         Object {
                           "modules": false,
                           "useBuiltIns": "entry",
                         },
                       ],
                       Array [
-                        "/Users/kyle/dev/libraries/medpack/node_modules/@babel/preset-react/lib/index.js",
+                        "@babel/preset-react",
                         Object {
                           "development": false,
                           "useBuiltIns": true,
                         },
                       ],
-                      "/Users/kyle/dev/libraries/medpack/node_modules/@babel/preset-flow/lib/index.js",
+                      "@babel/preset-flow",
                     ],
                   },
                 },
@@ -417,14 +460,14 @@ Object {
               "use": Array [
                 "/Users/kyle/dev/libraries/medpack/node_modules/mini-css-extract-plugin/dist/loader.js",
                 Object {
-                  "loader": "/Users/kyle/dev/libraries/medpack/node_modules/css-loader/index.js",
+                  "loader": "css-loader",
                   "options": Object {
                     "importLoaders": 1,
                     "sourceMap": true,
                   },
                 },
                 Object {
-                  "loader": "/Users/kyle/dev/libraries/medpack/node_modules/postcss-loader/lib/index.js",
+                  "loader": "postcss-loader",
                   "options": Object {
                     "ident": "postcss",
                     "plugins": [Function],
@@ -438,7 +481,7 @@ Object {
               "use": Array [
                 "/Users/kyle/dev/libraries/medpack/node_modules/mini-css-extract-plugin/dist/loader.js",
                 Object {
-                  "loader": "/Users/kyle/dev/libraries/medpack/node_modules/css-loader/index.js",
+                  "loader": "css-loader",
                   "options": Object {
                     "camelCase": true,
                     "importLoaders": 1,
@@ -448,7 +491,7 @@ Object {
                   },
                 },
                 Object {
-                  "loader": "/Users/kyle/dev/libraries/medpack/node_modules/postcss-loader/lib/index.js",
+                  "loader": "postcss-loader",
                   "options": Object {
                     "ident": "postcss",
                     "plugins": [Function],
@@ -463,14 +506,14 @@ Object {
               "use": Array [
                 "/Users/kyle/dev/libraries/medpack/node_modules/mini-css-extract-plugin/dist/loader.js",
                 Object {
-                  "loader": "/Users/kyle/dev/libraries/medpack/node_modules/css-loader/index.js",
+                  "loader": "css-loader",
                   "options": Object {
                     "importLoaders": 2,
                     "sourceMap": true,
                   },
                 },
                 Object {
-                  "loader": "/Users/kyle/dev/libraries/medpack/node_modules/postcss-loader/lib/index.js",
+                  "loader": "postcss-loader",
                   "options": Object {
                     "ident": "postcss",
                     "plugins": [Function],
@@ -478,7 +521,7 @@ Object {
                   },
                 },
                 Object {
-                  "loader": "/Users/kyle/dev/libraries/medpack/node_modules/sass-loader/lib/loader.js",
+                  "loader": "sass-loader",
                   "options": Object {
                     "sourceMap": true,
                   },
@@ -490,7 +533,7 @@ Object {
               "use": Array [
                 "/Users/kyle/dev/libraries/medpack/node_modules/mini-css-extract-plugin/dist/loader.js",
                 Object {
-                  "loader": "/Users/kyle/dev/libraries/medpack/node_modules/css-loader/index.js",
+                  "loader": "css-loader",
                   "options": Object {
                     "camelCase": true,
                     "importLoaders": 2,
@@ -500,7 +543,7 @@ Object {
                   },
                 },
                 Object {
-                  "loader": "/Users/kyle/dev/libraries/medpack/node_modules/postcss-loader/lib/index.js",
+                  "loader": "postcss-loader",
                   "options": Object {
                     "ident": "postcss",
                     "plugins": [Function],
@@ -508,7 +551,7 @@ Object {
                   },
                 },
                 Object {
-                  "loader": "/Users/kyle/dev/libraries/medpack/node_modules/sass-loader/lib/loader.js",
+                  "loader": "sass-loader",
                   "options": Object {
                     "sourceMap": true,
                   },
@@ -521,7 +564,7 @@ Object {
                 /\\\\\\.html\\$/,
                 /\\\\\\.json\\$/,
               ],
-              "loader": "/Users/kyle/dev/libraries/medpack/node_modules/file-loader/dist/cjs.js",
+              "loader": "file-loader",
               "options": Object {
                 "name": "static/media/[name].[hash:8].[ext]",
               },
@@ -597,8 +640,21 @@ Object {
         "name": "manifest",
       },
       "splitChunks": Object {
-        "chunks": "all",
-        "name": "vendors",
+        "cacheGroups": Object {
+          "async-vendors": Object {
+            "chunks": "async",
+            "minChunks": 2,
+            "name": "async-vendors",
+            "priority": 0,
+            "test": /node_modules/,
+          },
+          "vendors": Object {
+            "chunks": "initial",
+            "name": "vendors",
+            "priority": -10,
+            "test": /node_modules/,
+          },
+        },
       },
     },
     "output": Object {
@@ -643,14 +699,14 @@ Object {
       InterpolateHtmlPlugin {
         "replacements": Object {
           "NODE_ENV": "test",
-          "PUBLIC_URL": undefined,
+          "PUBLIC_URL": "",
         },
       },
       DefinePlugin {
         "definitions": Object {
           "process.env": Object {
             "NODE_ENV": "\\"test\\"",
-            "PUBLIC_URL": undefined,
+            "PUBLIC_URL": "\\"\\"",
           },
         },
       },
@@ -684,7 +740,7 @@ Object {
   },
   "env": Object {
     "NODE_ENV": "test",
-    "PUBLIC_URL": undefined,
+    "PUBLIC_URL": "",
   },
   "paths": Object {
     "appBuild": "/Users/kyle/dev/libraries/medpack/build",
@@ -702,7 +758,6 @@ Object {
       "/Users/kyle/dev/libraries/medpack/src",
     ],
     "testsSetup": "/Users/kyle/dev/libraries/medpack/src/setupTests.js",
-    "useYarn": true,
   },
 }
 `;
