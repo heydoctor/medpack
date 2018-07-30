@@ -1,6 +1,6 @@
 {
   "name": "medpack",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Extensible, opinionated, doctor approved webpack configuration",
   "repository": "sappira-inc/medpack",
   "engines": {
