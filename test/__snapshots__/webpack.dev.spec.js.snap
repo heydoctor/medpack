@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`webpack.dev 1`] = `
+Object {
+  "devtool": "cheap-module-source-map",
+  "entry": Array [
+    "/Users/kyle/dev/libraries/medpack/src/config/polyfills.js",
+    "/Users/kyle/dev/libraries/medpack/node_modules/react-dev-utils/webpackHotDevClient.js",
+    undefined,
+  ],
+  "mode": "development",
+  "output": Object {
+    "chunkFilename": "static/js/[name].chunk.js",
+    "filename": "static/js/bundle.js",
+    "pathinfo": true,
+    "publicPath": "/",
+  },
+  "plugins": Array [
+    HotModuleReplacementPlugin {
+      "fullBuildTimeout": 200,
+      "multiStep": undefined,
+      "options": Object {},
+      "requestTimeout": 10000,
+    },
+    CaseSensitivePathsPlugin {
+      "fsOperations": 0,
+      "options": Object {},
+      "pathCache": Object {},
+      "primed": false,
+    },
+  ],
+}
+`;
