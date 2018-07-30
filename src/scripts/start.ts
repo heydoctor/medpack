@@ -12,21 +12,6 @@ import { choosePort, createCompiler, prepareProxy, prepareUrls } from 'react-dev
 import createDevServerConfig from '../config/dev-server';
 import { getConfig } from '../utils';
 
-const isInteractive = process.stdout.isTTY;
-
-// Tools like Cloud9 rely on this.
-const DEFAULT_PORT = parseInt(process.env.PORT || '3000', 10) || 8080;
-const HOST = process.env.HOST || '0.0.0.0';
-
-if (process.env.HOST) {
-  console.log(
-    chalk.cyan(`Attempting to bind to HOST environment variable: ${chalk.yellow(chalk.bold(process.env.HOST))}`)
-  );
-  console.log(`If this was unintentional, check that you haven't mistakenly set it in your shell.`);
-  console.log(`Learn more here: ${chalk.yellow('http://bit.ly/CRA-advanced-config')}`);
-  console.log();
-}
-
 export type StartOptions = {
   config: string,
 }
@@ -36,14 +21,30 @@ export default ({ config: configPath }: StartOptions) => {
   process.env.BABEL_ENV = 'development';
   process.env.NODE_ENV = 'development';
 
+  // Grab medpack config
+  const { config, paths } = getConfig(configPath);
+
+  const isInteractive = process.stdout.isTTY;
+
+  // Tools like Cloud9 rely on this.
+  const DEFAULT_PORT = parseInt(process.env.PORT || '3000', 10) || 8080;
+  const HOST = process.env.HOST || '0.0.0.0';
+
+  if (process.env.HOST) {
+    console.log(
+      chalk.cyan(`Attempting to bind to HOST environment variable: ${chalk.yellow(chalk.bold(process.env.HOST))}`)
+    );
+    console.log(`If this was unintentional, check that you haven't mistakenly set it in your shell.`);
+    console.log(`Learn more here: ${chalk.yellow('http://bit.ly/CRA-advanced-config')}`);
+    console.log();
+  }
+
   // Makes the script crash on unhandled rejections instead of silently
   // ignoring them. In the future, promise rejections that are not handled will
   // terminate the Node.js process with a non-zero exit code.
   process.on('unhandledRejection', err => {
     throw err;
   });
-
-  const { config, paths } = getConfig(configPath);
 
   choosePort(HOST, DEFAULT_PORT)
     .then((port: number) => {
