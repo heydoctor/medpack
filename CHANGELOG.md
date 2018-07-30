@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.0.5"></a>
+## [1.0.5](https://github.com/sappira-inc/medpack/compare/v1.0.4...v1.0.5) (2018-07-30)
+
+
+### Bug Fixes
+
+* require medpack config first so we can obtain custom port ([5df32c8](https://github.com/sappira-inc/medpack/commit/5df32c8))
+
+
+
 <a name="1.0.4"></a>
 ## [1.0.4](https://github.com/sappira-inc/medpack/compare/v1.0.3...v1.0.4) (2018-07-30)
 
