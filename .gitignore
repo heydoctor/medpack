@@ -5,7 +5,8 @@
 
 # testing
 **/coverage
-**/env*
+**/.env*
+
 # production
 /lib
 

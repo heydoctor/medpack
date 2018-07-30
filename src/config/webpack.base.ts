@@ -79,6 +79,23 @@ export default ({ mode, paths, env, sourceMaps }: IWebpackConfig): Configuration
       devtoolModuleFilenameTemplate: info => path.relative(paths.appSrc, info.absoluteResourcePath).replace(/\\/g, '/'),
     },
     optimization: {
+      splitChunks: {
+        cacheGroups: {
+          vendors: {
+            test: /node_modules/,
+            chunks: 'initial',
+            priority: -10,
+            name: 'vendors',
+          },
+          'async-vendors': {
+            test: /node_modules/,
+            minChunks: 2,
+            chunks: 'async',
+            priority: 0,
+            name: 'async-vendors'
+          }
+        }
+      },
       // Keep the runtime chunk seperated to enable long term caching
       // https://twitter.com/wSokra/status/969679223278505985
       runtimeChunk: {
@@ -115,12 +132,12 @@ export default ({ mode, paths, env, sourceMaps }: IWebpackConfig): Configuration
               use: [
                 // This loader parallelizes code compilation, it is optional but
                 // improves compile time on larger projects
-                // {
-                //   loader: require.resolve('thread-loader'),
-                //   options: {
-                //     poolTimeout: Infinity, // keep workers alive for more effective watch mode
-                //   },
-                // },
+                {
+                  loader: require.resolve('thread-loader'),
+                  options: {
+                    poolTimeout: Infinity, // keep workers alive for more effective watch mode
+                  },
+                },
                 {
                   loader: require.resolve('babel-loader'),
                   options: {

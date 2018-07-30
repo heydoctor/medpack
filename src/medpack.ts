@@ -6,13 +6,14 @@ import webpackDev from './config/webpack.dev';
 import webpackProd from './config/webpack.prod';
 import defaultPaths, { IPaths } from './config/paths';
 import getEnv from './config/env';
+import { ILooseObject } from './config/types';
 
 export interface IMedpackOptions {
   mode?: "development" | "production",
   publicUrl?: string,
   sourceMaps?: boolean,
   paths?: IPaths,
-  env?: Object,
+  env?: ILooseObject,
   webpack?: (config: Configuration) => Configuration
 }
 
@@ -30,9 +31,8 @@ export default ({
   env: customEnv = {},
   webpack: customWebpack = a => a,
 }: IMedpackOptions = {}): IMedpack => {
-  const prod = mode === 'production';
   const paths = merge(defaultPaths, customPaths);
-  const env = merge(getEnv(publicUrl), customEnv)
+  const env = getEnv(customEnv, publicUrl)
 
   const options = {
     mode,
@@ -43,7 +43,7 @@ export default ({
   };
 
   const baseConfig = webpackBase(options);
-  const envConfig = prod ? webpackProd(options) : webpackDev(options);
+  const envConfig = mode === 'production' ? webpackProd(options) : webpackDev(options);
   const config = customWebpack(webpackMerge(baseConfig, envConfig));
 
   return {

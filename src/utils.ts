@@ -1,13 +1,14 @@
-import path from 'path';
+import { existsSync } from 'fs';
+import {resolve} from 'path';
 import medpack, { IMedpack } from './medpack';
 
-export const getConfig = (configPath: string): IMedpack => {
-  const resolvedPath = path.resolve(configPath);
+export const getConfig = (configPath: string = ''): IMedpack => {
+  const resolvedPath = resolve(configPath);
 
-  try {
+  if (existsSync(resolvedPath)) {
     const config = require(resolvedPath);
     return config.default || config;
-  } catch(err) {
-    return medpack();
   }
+
+  return medpack();
 }

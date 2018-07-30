@@ -12,6 +12,7 @@ class App extends React.Component {
         <img src={logo} alt="" width="100" />
         <h1 className={styles.pageTitle}>Hello medpack!</h1>
         <Counter />
+        <span>{process.env.FROM_ENV}</span>
       </div>
     );
   }

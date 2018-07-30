@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
-require('@babel/register');
-
+import '@babel/register';
 import findUp from 'find-up';
 import start, { StartOptions } from './scripts/start';
 import build, { BuildOptions } from './scripts/build';

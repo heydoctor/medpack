@@ -25,10 +25,6 @@ export default ({ paths, sourceMaps }: IWebpackConfig): Configuration => {
     },
     devtool: sourceMaps ? 'source-map' : false,
     optimization: {
-      splitChunks: {
-        chunks: 'all',
-        name: 'vendors',
-      },
       minimizer: [
         new UglifyJsPlugin({
           uglifyOptions: {
