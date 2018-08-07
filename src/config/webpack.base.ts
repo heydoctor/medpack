@@ -132,19 +132,22 @@ export default ({ mode, paths, env, sourceMaps }: IWebpackConfig): Configuration
               use: [
                 // This loader parallelizes code compilation, it is optional but
                 // improves compile time on larger projects
-                {
-                  loader: 'thread-loader',
-                  options: {
-                    poolTimeout: Infinity, // keep workers alive for more effective watch mode
-                  },
-                },
+                // {
+                //   loader: 'thread-loader',
+                //   options: {
+                //     poolTimeout: Infinity, // keep workers alive for more effective watch mode
+                //   },
+                // },
                 {
                   loader: 'babel-loader',
                   options: {
                     presets: [
-                      ['@babel/preset-env', { useBuiltIns: 'entry', modules: false }],
-                      ['@babel/preset-react', { development: mode === 'development', useBuiltIns: true }],
-                      '@babel/preset-flow'
+                      ['@babel/env', {
+                        useBuiltIns: 'entry',
+                        modules: false,
+                      }],
+                      ['@babel/react', { development: mode === 'development', useBuiltIns: true }],
+                      '@babel/flow'
                     ],
                     plugins: [
                       ['@babel/plugin-proposal-decorators', { legacy: true }],
@@ -155,7 +158,6 @@ export default ({ mode, paths, env, sourceMaps }: IWebpackConfig): Configuration
                         '@babel/plugin-transform-runtime',
                         {
                           helpers: false,
-                          polyfill: false,
                           regenerator: true,
                         },
                       ],

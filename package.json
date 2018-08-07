@@ -14,9 +14,10 @@
   ],
   "license": "MIT",
   "scripts": {
+    "example": "cd example && yarn start",
     "test": "jest",
     "prebuild": "rimraf lib",
-    "build": "tsc --emitDeclarationOnly && babel src --out-dir lib --copy-files --extensions \".ts\"",
+    "build": "babel src --out-dir lib --copy-files --extensions \".ts\"",
     "prepublishOnly": "npm run build",
     "release": "standard-version"
   },
@@ -56,6 +57,7 @@
     "mini-css-extract-plugin": "0.4.1",
     "node-sass": "4.9.2",
     "object-assign": "4.1.1",
+    "object.values": "^1.0.4",
     "optimize-css-assets-webpack-plugin": "5.0.0",
     "postcss-flexbugs-fixes": "3.3.1",
     "postcss-loader": "2.1.6",
@@ -80,7 +82,7 @@
     "react-dom": "^16.0.0"
   },
   "devDependencies": {
-    "@babel/preset-typescript": "^7.0.0-beta.54",
+    "@babel/preset-typescript": "^7.0.0-beta.53",
     "@types/autoprefixer": "^6.7.3",
     "@types/case-sensitive-paths-webpack-plugin": "^2.1.2",
     "@types/express": "^4.16.0",
