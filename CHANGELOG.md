@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.0.7"></a>
+## [1.0.7](https://github.com/sappira-inc/medpack/compare/v1.0.6...v1.0.7) (2018-08-07)
+
+
+### Bug Fixes
+
+* Remove polyfill setting from transform runtime plugin ([1cc3b79](https://github.com/sappira-inc/medpack/commit/1cc3b79))
+
+
+
 <a name="1.0.6"></a>
 ## [1.0.6](https://github.com/sappira-inc/medpack/compare/v1.0.5...v1.0.6) (2018-07-30)
 
