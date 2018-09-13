@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.1.0"></a>
+# [1.1.0](https://github.com/sappira-inc/medpack/compare/v1.0.8...v1.1.0) (2018-09-13)
+
+
+### Features
+
+* Add Object.entries shim ([d833070](https://github.com/sappira-inc/medpack/commit/d833070))
+
+
+
 <a name="1.0.8"></a>
 ## [1.0.8](https://github.com/sappira-inc/medpack/compare/v1.0.7...v1.0.8) (2018-09-04)
 
