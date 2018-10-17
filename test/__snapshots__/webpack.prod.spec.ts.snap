@@ -2,6 +2,7 @@
 
 exports[`webpack.prod 1`] = `
 Object {
+  "bail": true,
   "devtool": false,
   "entry": Array [
     "/Users/kyle/dev/libraries/medpack/src/config/polyfills",
@@ -13,28 +14,22 @@ Object {
       UglifyJsPlugin {
         "options": Object {
           "cache": true,
+          "cacheKeys": [Function],
           "exclude": undefined,
           "extractComments": false,
           "include": undefined,
+          "minify": undefined,
           "parallel": true,
           "sourceMap": false,
           "test": /\\\\\\.js\\(\\\\\\?\\.\\*\\)\\?\\$/i,
           "uglifyOptions": Object {
             "compress": Object {
               "comparisons": false,
-              "ecma": 5,
               "warnings": false,
-            },
-            "mangle": Object {
-              "safari10": true,
             },
             "output": Object {
               "ascii_only": true,
               "comments": false,
-              "ecma": 5,
-            },
-            "parse": Object {
-              "ecma": 8,
             },
           },
           "warningsFilter": [Function],
@@ -54,6 +49,7 @@ Object {
           "canPrint": undefined,
           "cssProcessor": [Function],
           "cssProcessorOptions": Object {},
+          "cssProcessorPluginOptions": Object {},
         },
         "phaseAssetProcessors": Object {
           "compilation.optimize-assets": Array [],

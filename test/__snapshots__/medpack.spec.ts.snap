@@ -37,12 +37,6 @@ Object {
               "test": /\\(js\\|jsx\\)\\$/,
               "use": Array [
                 Object {
-                  "loader": "thread-loader",
-                  "options": Object {
-                    "poolTimeout": Infinity,
-                  },
-                },
-                Object {
                   "loader": "babel-loader",
                   "options": Object {
                     "cacheDirectory": false,
@@ -71,7 +65,6 @@ Object {
                         "@babel/plugin-transform-runtime",
                         Object {
                           "helpers": false,
-                          "polyfill": false,
                           "regenerator": true,
                         },
                       ],
@@ -81,20 +74,20 @@ Object {
                     ],
                     "presets": Array [
                       Array [
-                        "@babel/preset-env",
+                        "@babel/env",
                         Object {
                           "modules": false,
                           "useBuiltIns": "entry",
                         },
                       ],
                       Array [
-                        "@babel/preset-react",
+                        "@babel/react",
                         Object {
                           "development": false,
                           "useBuiltIns": true,
                         },
                       ],
-                      "@babel/preset-flow",
+                      "@babel/flow",
                     ],
                   },
                 },
@@ -250,6 +243,10 @@ Object {
     },
     "plugins": Array [
       HtmlWebpackPlugin {
+        "assetJson": undefined,
+        "childCompilationOutputName": undefined,
+        "childCompilerHash": undefined,
+        "hash": undefined,
         "options": Object {
           "cache": true,
           "chunks": "all",
@@ -275,12 +272,15 @@ Object {
           },
           "showErrors": true,
           "template": "/Users/kyle/dev/libraries/medpack/public/index.html",
+          "templateContent": false,
           "templateParameters": [Function],
           "title": "Webpack App",
           "xhtml": false,
         },
+        "version": 4,
       },
       InterpolateHtmlPlugin {
+        "htmlWebpackPlugin": [Function],
         "replacements": Object {
           "NODE_ENV": "test",
           "PUBLIC_URL": "",
@@ -311,8 +311,10 @@ Object {
       },
       IgnorePlugin {
         "checkIgnore": [Function],
-        "contextRegExp": /moment\\$/,
-        "resourceRegExp": /\\^\\\\\\.\\\\/locale\\$/,
+        "options": Object {
+          "contextRegExp": /moment\\$/,
+          "resourceRegExp": /\\^\\\\\\.\\\\/locale\\$/,
+        },
       },
       HotModuleReplacementPlugin {
         "fullBuildTimeout": 200,
@@ -358,6 +360,7 @@ Object {
 exports[`medpack production 1`] = `
 Object {
   "config": Object {
+    "bail": true,
     "devtool": "source-map",
     "entry": Array [
       "/Users/kyle/dev/libraries/medpack/src/config/polyfills",
@@ -391,12 +394,6 @@ Object {
               "test": /\\(js\\|jsx\\)\\$/,
               "use": Array [
                 Object {
-                  "loader": "thread-loader",
-                  "options": Object {
-                    "poolTimeout": Infinity,
-                  },
-                },
-                Object {
                   "loader": "babel-loader",
                   "options": Object {
                     "cacheDirectory": false,
@@ -425,7 +422,6 @@ Object {
                         "@babel/plugin-transform-runtime",
                         Object {
                           "helpers": false,
-                          "polyfill": false,
                           "regenerator": true,
                         },
                       ],
@@ -435,20 +431,20 @@ Object {
                     ],
                     "presets": Array [
                       Array [
-                        "@babel/preset-env",
+                        "@babel/env",
                         Object {
                           "modules": false,
                           "useBuiltIns": "entry",
                         },
                       ],
                       Array [
-                        "@babel/preset-react",
+                        "@babel/react",
                         Object {
                           "development": false,
                           "useBuiltIns": true,
                         },
                       ],
-                      "@babel/preset-flow",
+                      "@babel/flow",
                     ],
                   },
                 },
@@ -578,28 +574,22 @@ Object {
         UglifyJsPlugin {
           "options": Object {
             "cache": true,
+            "cacheKeys": [Function],
             "exclude": undefined,
             "extractComments": false,
             "include": undefined,
+            "minify": undefined,
             "parallel": true,
             "sourceMap": true,
             "test": /\\\\\\.js\\(\\\\\\?\\.\\*\\)\\?\\$/i,
             "uglifyOptions": Object {
               "compress": Object {
                 "comparisons": false,
-                "ecma": 5,
                 "warnings": false,
-              },
-              "mangle": Object {
-                "safari10": true,
               },
               "output": Object {
                 "ascii_only": true,
                 "comments": false,
-                "ecma": 5,
-              },
-              "parse": Object {
-                "ecma": 8,
               },
             },
             "warningsFilter": [Function],
@@ -619,6 +609,7 @@ Object {
             "canPrint": undefined,
             "cssProcessor": [Function],
             "cssProcessorOptions": Object {},
+            "cssProcessorPluginOptions": Object {},
           },
           "phaseAssetProcessors": Object {
             "compilation.optimize-assets": Array [],
@@ -666,6 +657,10 @@ Object {
     },
     "plugins": Array [
       HtmlWebpackPlugin {
+        "assetJson": undefined,
+        "childCompilationOutputName": undefined,
+        "childCompilerHash": undefined,
+        "hash": undefined,
         "options": Object {
           "cache": true,
           "chunks": "all",
@@ -691,12 +686,15 @@ Object {
           },
           "showErrors": true,
           "template": "/Users/kyle/dev/libraries/medpack/public/index.html",
+          "templateContent": false,
           "templateParameters": [Function],
           "title": "Webpack App",
           "xhtml": false,
         },
+        "version": 4,
       },
       InterpolateHtmlPlugin {
+        "htmlWebpackPlugin": [Function],
         "replacements": Object {
           "NODE_ENV": "test",
           "PUBLIC_URL": "",
@@ -727,8 +725,10 @@ Object {
       },
       IgnorePlugin {
         "checkIgnore": [Function],
-        "contextRegExp": /moment\\$/,
-        "resourceRegExp": /\\^\\\\\\.\\\\/locale\\$/,
+        "options": Object {
+          "contextRegExp": /moment\\$/,
+          "resourceRegExp": /\\^\\\\\\.\\\\/locale\\$/,
+        },
       },
       MiniCssExtractPlugin {
         "options": Object {
