@@ -265,7 +265,7 @@ export default ({ mode, paths, env, sourceMaps }: IWebpackConfig): Configuration
       // <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
       // In production, it will be an empty string unless you specify "homepage"
       // in `package.json`, in which case it will be the pathname of that URL.
-      new InterpolateHtmlPlugin(env),
+      new InterpolateHtmlPlugin(HtmlWebpackPlugin, env),
 
       // Makes some environment variables available to the JS code, for example:
       // if (process.env.NODE_ENV === 'production') { ... }. See `./env.js`.
