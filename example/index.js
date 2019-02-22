@@ -1,23 +1,14 @@
 import React from 'react';
 import { render } from 'react-dom';
-import Counter from './components/Counter';
-import './index.scss';
-import styles from './index.module.scss';
-import logo from './logo.svg';
+import App from './App';
 
-function App() {
-  return (
-    <>
-      <img src={logo} alt="" width="100" />
-      <h1 className={styles.pageTitle}>Hello medpack!</h1>
-      <Counter />
-      <br />
-      <span>We can also use the environment variables you make available in medpack.js:</span>
-      <pre>{JSON.stringify(process.env, null, 2)}</pre>
-    </>
-  )
+const renderApp = Component => render(<Component />, document.getElementById('root'))
+
+renderApp(App);
+
+if (module.hot) {
+  module.hot.accept('./App', () => {
+    const NextApp = require('./App').default;
+    renderApp(NextApp);
+  });
 }
-
-const rootEl = document.getElementById('root');
-
-render(<App />, rootEl);
