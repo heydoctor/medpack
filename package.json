@@ -14,7 +14,8 @@
   ],
   "license": "MIT",
   "scripts": {
-    "example": "cd example && yarn start",
+    "example": "cd example && npm run start",
+    "example:build": "cd example && npm run build",
     "test": "jest",
     "prebuild": "rimraf lib",
     "build": "babel src --out-dir lib --copy-files --extensions \".ts\"",
