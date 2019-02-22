@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [1.4.0](https://github.com/sappira-inc/medpack/compare/v1.3.0...v1.4.0) (2019-02-22)
+
+
+### Features
+
+* Upgrade dependencies to latest; Support for react-hot-loader ([#3](https://github.com/sappira-inc/medpack/issues/3)) ([d855c79](https://github.com/sappira-inc/medpack/commit/d855c79)), closes [/github.com/webpack-contrib/file-loader/blob/master/CHANGELOG.md#300-2018-12-20](https://github.com//github.com/webpack-contrib/file-loader/blob/master/CHANGELOG.md/issues/300-2018-12-20) [/github.com/webpack-contrib/file-loader/blob/master/CHANGELOG.md#300-2018-12-20](https://github.com//github.com/webpack-contrib/file-loader/blob/master/CHANGELOG.md/issues/300-2018-12-20) [/github.com/webpack-contrib/css-loader/blob/master/CHANGELOG.md#200-2018-12-07](https://github.com//github.com/webpack-contrib/css-loader/blob/master/CHANGELOG.md/issues/200-2018-12-07) [/github.com/webpack-contrib/css-loader/blob/master/CHANGELOG.md#200-2018-12-07](https://github.com//github.com/webpack-contrib/css-loader/blob/master/CHANGELOG.md/issues/200-2018-12-07) [/github.com/webpack-contrib/thread-loader/blob/master/CHANGELOG.md#200-2018-12-18](https://github.com//github.com/webpack-contrib/thread-loader/blob/master/CHANGELOG.md/issues/200-2018-12-18) [/github.com/webpack-contrib/thread-loader/blob/master/CHANGELOG.md#200-2018-12-18](https://github.com//github.com/webpack-contrib/thread-loader/blob/master/CHANGELOG.md/issues/200-2018-12-18)
+
+
+
 <a name="1.3.0"></a>
 # [1.3.0](https://github.com/sappira-inc/medpack/compare/v1.2.0...v1.3.0) (2019-02-08)
 
