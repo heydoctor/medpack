@@ -1,16 +1,17 @@
 # ⛑ Medpack
 
+## Table of Contents
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Commands](#commands)
+  - [Hot Reloading](#hot-reloading)
+
 ## Installation
 ```sh
 $ yarn add --dev medpack
 $ npm install --save-dev medpack
 ```
 
-# Table of Contents
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Commands](#commands)
-  - [Hot Reloading](#hot-reloading)
 
 ## Usage
 Medpack *just works* out of the box. If you need more flexibility, add a `medpack.js` config file to the root of your directory:
