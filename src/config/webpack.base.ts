@@ -132,12 +132,12 @@ export default ({ mode, paths, env, sourceMaps }: IWebpackConfig): Configuration
               use: [
                 // This loader parallelizes code compilation, it is optional but
                 // improves compile time on larger projects
-                // {
-                //   loader: 'thread-loader',
-                //   options: {
-                //     poolTimeout: Infinity, // keep workers alive for more effective watch mode
-                //   },
-                // },
+                {
+                  loader: 'thread-loader',
+                  options: {
+                    poolTimeout: Infinity, // keep workers alive for more effective watch mode
+                  },
+                },
                 {
                   loader: 'babel-loader',
                   options: {
