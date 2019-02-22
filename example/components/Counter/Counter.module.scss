@@ -1,0 +1,19 @@
+.button {
+  background: black;
+  color: white;
+  font-size: 18px;
+  border-radius: 100px;
+  height: 30px;
+  width: 30px;
+  appearance: none;
+  outline: none;
+
+  &:hover {
+    box-shadow: 0 2px 4px black;
+  }
+}
+
+.counter {
+  font-weight: bolder;
+  margin: 0 12px;
+}
