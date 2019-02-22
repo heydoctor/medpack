@@ -24,9 +24,10 @@ const sassModuleRegex = /\.module\.(scss|sass)$/;
 // Default Webpack configuration
 // @see: https://webpack.js.org/configuration/
 export default ({ mode, paths, env, sourceMaps }: IWebpackConfig): Configuration => {
+  const isProd = mode === 'production';
 
   // Common function to get style loaders
-  const enableSourceMaps = mode === 'production' && sourceMaps;
+  const enableSourceMaps = isProd && sourceMaps;
 
   const getStyleLoaders = (cssOptions: Object, preProcessor: string = ''): Array<Loader> => {
     const loaders = [
@@ -54,7 +55,7 @@ export default ({ mode, paths, env, sourceMaps }: IWebpackConfig): Configuration
       },
     ];
 
-    if (mode === 'production') {
+    if (isProd) {
       // @ts-ignore
       loaders.unshift(MiniCssExtractPlugin.loader);
     } else {
@@ -146,7 +147,7 @@ export default ({ mode, paths, env, sourceMaps }: IWebpackConfig): Configuration
                         useBuiltIns: 'entry',
                         modules: false,
                       }],
-                      ['@babel/react', { development: mode === 'development', useBuiltIns: true }],
+                      ['@babel/react', { development: !isProd, useBuiltIns: true }],
                       '@babel/flow'
                     ],
                     plugins: [
@@ -163,7 +164,8 @@ export default ({ mode, paths, env, sourceMaps }: IWebpackConfig): Configuration
                       ],
                       '@babel/plugin-syntax-dynamic-import',
                       '@babel/plugin-proposal-export-default-from',
-                      'babel-plugin-lodash'
+                      'babel-plugin-lodash',
+                      'react-hot-loader/babel'
                     ],
                     // This is a feature of `babel-loader` for webpack (not Babel itself).
                     // It enables caching results in ./node_modules/.cache/babel-loader/
