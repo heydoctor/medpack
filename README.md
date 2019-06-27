@@ -1,4 +1,4 @@
-# ⛑ Medpack [![npm version](https://badge.fury.io/js/medpack.svg)](http://badge.fury.io/js/medpack) [![Build Status](https://travis-ci.org/heydoctor/medpack.svg?branch=master)](https://travis-ci.org/heydoctor/medpack) [![codecov](https://codecov.io/gh/heydoctor/medpack/branch/master/graph/badge.svg)](https://codecov.io/gh/heydoctor/medpack)
+# ⛑ Medpack [![npm version](https://badge.fury.io/js/medpack.svg)](http://badge.fury.io/js/medpack) [![Build Status](https://travis-ci.org/heydoctor/medpack.svg?branch=master)](https://travis-ci.org/heydoctor/medpack) [![codecov](https://codecov.io/gh/heydoctor/medpack/branch/master/graph/badge.svg)](https://codecov.io/gh/heydoctor/medpack) [![Greenkeeper badge](https://badges.greenkeeper.io/heydoctor/medpack.svg)](https://greenkeeper.io/)
 > Zero-to-slim config webpack wrapper
 
 ## Table of Contents
