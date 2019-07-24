@@ -2,7 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-## [1.4.1](https://github.com/sappira-inc/medpack/compare/v1.4.0...v1.4.1) (2019-07-23)
+## [1.4.2](https://github.com/sappira-inc/medpack/compare/v1.4.0...v1.4.2) (2019-07-24)
+
+
+### Bug Fixes
+
+* update uglifyjs warnings configuration ([#14](https://github.com/sappira-inc/medpack/issues/14)) ([570cd6e](https://github.com/sappira-inc/medpack/commit/570cd6e))
 
 
 
