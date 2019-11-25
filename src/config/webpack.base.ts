@@ -93,14 +93,14 @@ export default ({ mode, paths, env, sourceMaps }: IWebpackConfig): Configuration
             minChunks: 2,
             chunks: 'async',
             priority: 0,
-            name: 'async-vendors'
-          }
-        }
+            name: 'async-vendors',
+          },
+        },
       },
       // Keep the runtime chunk seperated to enable long term caching
       // https://twitter.com/wSokra/status/969679223278505985
       runtimeChunk: {
-        name: 'manifest'
+        name: 'manifest',
       },
     },
     module: {
@@ -125,7 +125,7 @@ export default ({ mode, paths, env, sourceMaps }: IWebpackConfig): Configuration
               },
             },
             // Process application JS with Babel.
-            // The preset includes JSX, Flow, and some ESnext features.
+            // The preset includes JSX and some ESnext features.
             {
               test: /(js|jsx)$/,
               // include: paths.srcPaths,
@@ -143,12 +143,14 @@ export default ({ mode, paths, env, sourceMaps }: IWebpackConfig): Configuration
                   loader: 'babel-loader',
                   options: {
                     presets: [
-                      ['@babel/env', {
-                        useBuiltIns: 'entry',
-                        modules: false,
-                      }],
+                      [
+                        '@babel/env',
+                        {
+                          useBuiltIns: 'entry',
+                          modules: false,
+                        },
+                      ],
                       ['@babel/react', { development: !isProd, useBuiltIns: true }],
-                      '@babel/flow'
                     ],
                     plugins: [
                       ['@babel/plugin-proposal-decorators', { legacy: true }],
@@ -165,7 +167,8 @@ export default ({ mode, paths, env, sourceMaps }: IWebpackConfig): Configuration
                       '@babel/plugin-syntax-dynamic-import',
                       '@babel/plugin-proposal-export-default-from',
                       'babel-plugin-lodash',
-                      'react-hot-loader/babel'
+                      'react-hot-loader/babel',
+                      '@babel/plugin-proposal-optional-chaining',
                     ],
                     // This is a feature of `babel-loader` for webpack (not Babel itself).
                     // It enables caching results in ./node_modules/.cache/babel-loader/
@@ -197,9 +200,10 @@ export default ({ mode, paths, env, sourceMaps }: IWebpackConfig): Configuration
               use: getStyleLoaders({
                 importLoaders: 1,
                 sourceMap: enableSourceMaps,
-                modules: true,
-                camelCase: true,
-                localIdentName: '[name]__[local]___[hash:base64:5]',
+                modules: {
+                  localIdentName: '[name]__[local]___[hash:base64:5]',
+                },
+                localsConvention: 'camelCase',
               }),
             },
             // Opt-in support for SASS (using .scss or .sass extensions).
@@ -220,9 +224,10 @@ export default ({ mode, paths, env, sourceMaps }: IWebpackConfig): Configuration
                 {
                   importLoaders: 2,
                   sourceMap: enableSourceMaps,
-                  modules: true,
-                  camelCase: true,
-                  localIdentName: '[name]__[local]___[hash:base64:5]',
+                  modules: {
+                    localIdentName: '[name]__[local]___[hash:base64:5]',
+                  },
+                  localsConvention: 'camelCase',
                 },
                 'sass-loader'
               ),

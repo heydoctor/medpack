@@ -13,8 +13,8 @@ import createDevServerConfig from '../config/dev-server';
 import { getConfig } from '../utils';
 
 export type StartOptions = {
-  config: string,
-}
+  config: string;
+};
 
 export default ({ config: configPath }: StartOptions) => {
   // Do this as the first thing so that any code reading it knows the right env.
@@ -59,7 +59,7 @@ export default ({ config: configPath }: StartOptions) => {
       const appName = pkg.name;
 
       // Create a webpack compiler that is configured with custom messages.
-      const compiler = createCompiler(webpack, config, appName, urls, paths.useYarn);
+      const compiler = createCompiler({ webpack, config, appName, urls, useYarn: paths.useYarn });
 
       // Load proxy config
       const proxySetting = pkg.proxy;
@@ -90,7 +90,7 @@ export default ({ config: configPath }: StartOptions) => {
       const exit = () => {
         devServer.close();
         process.exit();
-      }
+      };
 
       process.on('SIGINT', exit);
       process.on('SIGTERM', exit);
