@@ -2,12 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-## [1.4.2](https://github.com/sappira-inc/medpack/compare/v1.4.0...v1.4.2) (2019-07-24)
+# [1.5.0](https://github.com/sappira-inc/medpack/compare/v1.4.2...v1.5.0) (2019-11-26)
 
 
-### Bug Fixes
+### Features
 
-* update uglifyjs warnings configuration ([#14](https://github.com/sappira-inc/medpack/issues/14)) ([570cd6e](https://github.com/sappira-inc/medpack/commit/570cd6e))
+* Upgrade deps + add optional chaining  ([#16](https://github.com/sappira-inc/medpack/issues/16)) ([3ea743f](https://github.com/sappira-inc/medpack/commit/3ea743f))
 
 
 
