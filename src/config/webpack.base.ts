@@ -75,6 +75,9 @@ export default ({ mode, paths, env, sourceMaps }: IWebpackConfig): Configuration
   };
 
   return {
+    resolve: {
+      extensions: ['.ts', '.tsx', '.js', '.jsx']
+    },
     output: {
       // Point sourcemap entries to original disk location (format as URL on Windows)
       devtoolModuleFilenameTemplate: info => path.relative(paths.appSrc, info.absoluteResourcePath).replace(/\\/g, '/'),
@@ -127,7 +130,7 @@ export default ({ mode, paths, env, sourceMaps }: IWebpackConfig): Configuration
             // Process application JS with Babel.
             // The preset includes JSX and some ESnext features.
             {
-              test: /(js|jsx)$/,
+              test: /(js|jsx|ts|tsx)$/,
               // include: paths.srcPaths,
               exclude: /node_modules/,
               use: [
@@ -151,6 +154,7 @@ export default ({ mode, paths, env, sourceMaps }: IWebpackConfig): Configuration
                         },
                       ],
                       ['@babel/react', { development: !isProd, useBuiltIns: true }],
+                      ['@babel/typescript'],
                     ],
                     plugins: [
                       ['@babel/plugin-proposal-decorators', { legacy: true }],
