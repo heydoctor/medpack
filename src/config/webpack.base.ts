@@ -157,7 +157,7 @@ export default ({ mode, paths, env, sourceMaps }: IWebpackConfig): Configuration
                       ['@babel/typescript'],
                     ],
                     plugins: [
-                      '@babel/plugin-transform-typescript',
+                      ['@babel/plugin-transform-typescript', { isTSX: true }],
                       ['@babel/plugin-proposal-decorators', { legacy: true }],
                       '@babel/plugin-transform-destructuring',
                       ['@babel/plugin-proposal-class-properties', { loose: true }],
