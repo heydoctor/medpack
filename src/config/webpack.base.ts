@@ -154,7 +154,6 @@ export default ({ mode, paths, env, sourceMaps }: IWebpackConfig): Configuration
                         },
                       ],
                       ['@babel/react', { development: !isProd, useBuiltIns: true }],
-                      ['@babel/typescript'],
                     ],
                     plugins: [
                       ['@babel/plugin-transform-typescript', { isTSX: true }],
