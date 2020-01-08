@@ -1,6 +1,13 @@
-# Change Log
+# Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [1.6.0](https://github.com/sappira-inc/medpack/compare/v1.5.0...v1.6.0) (2020-01-08)
+
+
+### Features
+
+* Support Typescript ([#17](https://github.com/sappira-inc/medpack/issues/17)) ([e853b80](https://github.com/sappira-inc/medpack/commit/e853b80dcd629bc9d5fc0bfd12a03eb7bd2e2795))
 
 # [1.5.0](https://github.com/sappira-inc/medpack/compare/v1.4.2...v1.5.0) (2019-11-26)
 
