@@ -76,7 +76,7 @@ export default ({ mode, paths, env, sourceMaps }: IWebpackConfig): Configuration
 
   return {
     resolve: {
-      extensions: ['.ts', '.tsx', '.js', '.jsx']
+      extensions: ['.ts', '.tsx', '.js', '.jsx'],
     },
     output: {
       // Point sourcemap entries to original disk location (format as URL on Windows)
@@ -151,6 +151,7 @@ export default ({ mode, paths, env, sourceMaps }: IWebpackConfig): Configuration
                         {
                           useBuiltIns: 'entry',
                           modules: false,
+                          corejs: '3.6.3',
                         },
                       ],
                       ['@babel/react', { development: !isProd, useBuiltIns: true }],
