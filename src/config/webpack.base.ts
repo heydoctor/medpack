@@ -174,6 +174,7 @@ export default ({ mode, paths, env, sourceMaps }: IWebpackConfig): Configuration
                       'babel-plugin-lodash',
                       'react-hot-loader/babel',
                       '@babel/plugin-proposal-optional-chaining',
+                      'babel-plugin-styled-components',
                     ],
                     // This is a feature of `babel-loader` for webpack (not Babel itself).
                     // It enables caching results in ./node_modules/.cache/babel-loader/
