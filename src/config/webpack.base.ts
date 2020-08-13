@@ -132,7 +132,7 @@ export default ({ mode, paths, env, sourceMaps }: IWebpackConfig): Configuration
             {
               test: /(js|jsx|ts|tsx)$/,
               // include: paths.srcPaths,
-              exclude: /node_modules/,
+              // exclude: /node_modules/,
               use: [
                 // This loader parallelizes code compilation, it is optional but
                 // improves compile time on larger projects
